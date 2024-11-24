@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define SIZE 10
+
+int main()
+{
+    //write a program to find max and min values of set of numbers using a single dim array (1D)
+    int array[SIZE] = {11,21,43,55,66,33,12,99,83,45};
+    //  ---------------------------------------------
+    int maxNum=0 , minNum=0;
+    int firstIterator=0;
+
+
+
+    for(firstIterator=0 ; firstIterator < SIZE ; firstIterator++){
+        if(array[firstIterator] > maxNum){
+            maxNum = array[firstIterator] ;
+        }
+        if(array[firstIterator] < minNum){
+            minNum = array[firstIterator] ;
+        }
+    }
+
+    for(firstIterator=0 ; firstIterator < SIZE ; firstIterator++){
+        printf("array[%d] = %d \t",firstIterator,array[firstIterator]);
+    }
+
+
+
+    printf("Max = %d\n",maxNum);
+    printf("Min = %d\n",minNum);
+
+    return 0;
+}
