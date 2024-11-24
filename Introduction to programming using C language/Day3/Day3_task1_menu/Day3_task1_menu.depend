@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1731936055 source:d:\itp-4m\c-programming\day3_task1_menu\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	<dos.h>
+	<dir.h>
+
