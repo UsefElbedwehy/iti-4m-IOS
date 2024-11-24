@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void swap(int *a,int* b);
+int main()
+{
+    int firstVal=11 , secondVal=22;
+
+    printf("Before swap: firstVal = %d , secondVal = %d \n",firstVal,secondVal);
+    swap(&firstVal,&secondVal);
+    printf("After swap: firstVal = %d  , secondVal = %d ",firstVal,secondVal);
+
+    return 0;
+}
+

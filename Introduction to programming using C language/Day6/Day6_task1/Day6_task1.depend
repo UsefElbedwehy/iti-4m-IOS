@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1732364798 source:d:\itp-4m\c-programming\day6_task1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"swap.h"
+
+1732364729 d:\itp-4m\c-programming\day6_task1\swap.h
+
+1732364821 source:d:\itp-4m\c-programming\day6_task1\swap.c
+
