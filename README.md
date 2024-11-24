@@ -39,6 +39,6 @@
         </ul>
     </p>
 
-    <h3>Thank you for exploring my work! 🌟</h3>
+ <h3>Thank you for exploring my work! 🌟</h3>
 </body>
 </html>
