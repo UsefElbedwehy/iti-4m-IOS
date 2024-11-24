@@ -6,14 +6,13 @@
         Here, you'll find my progress as I explore the world of iOS app development.
     </p>
 
-    <h2>🚀 Overview</h2>
+<h2> Overview</h2>
     <p>
         This repository showcases projects, notes, and exercises completed during the program. 
         I focus on mastering Swift, UIKit, SwiftUI, Core Data, and other essential technologies, 
         with the goal of building user-friendly and innovative applications.
     </p>
-
-    <h2>🎯 Goals</h2>
+    <h2> Goals</h2>
     <ul>
         <li>Develop a strong foundation in iOS development.</li>
         <li>Learn app architecture, design patterns, and advanced tools.</li>
@@ -21,18 +20,17 @@
         <li>Stay updated on the latest trends in mobile development.</li>
     </ul>
 
-    <h2>📂 Repository Content</h2>
+  <h2> Repository Content</h2>
     <p>
         The repository includes real-world projects, detailed notes, and solved coding challenges. 
         It also features resources and materials that enhanced my learning process.
     </p>
-
-    <h2>📦 Clone This Repository</h2>
+    <h2> Clone This Repository</h2>
     <pre>
     <code>git clone https://github.com/UsefElbedwehy/iti-4m-IOS.git</code>
     </pre>
 
-    <h2>💡 Connect With Me</h2>
+ <h2> Connect With Me</h2>
     <p>
         Feel free to reach out or follow my journey:
         <ul>
