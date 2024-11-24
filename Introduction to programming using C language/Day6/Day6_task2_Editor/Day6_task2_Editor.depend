@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1732365628 source:d:\itp-4m\c-programming\day6_task2_editor\teminal.c
+	<dir.h>
+	<windows.h>
+	<dos.h>
+
+1732454277 source:d:\itp-4m\c-programming\day6_task2_editor\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	<dos.h>
+	<dir.h>
+	"teminal.h"
+
+1732365640 d:\itp-4m\c-programming\day6_task2_editor\teminal.h
+
