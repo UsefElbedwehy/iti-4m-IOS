@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1732734729 source:d:\itp-4m\c-programming\c_buildin_functions\usef_string.c
+
+1732741590 source:d:\itp-4m\c-programming\c_buildin_functions\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
