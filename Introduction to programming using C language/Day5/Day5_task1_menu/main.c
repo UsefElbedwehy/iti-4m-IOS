@@ -128,13 +128,13 @@ void SetColor(int ForgC){
      }
  }
  //for key actions
-int takeAction(int iterator,Emp e[]){
+int takeAction(int iterator,Emp *e, int sizeOfStack){
      switch(iterator){
          static EmpCounter=0;
          static displayC=0;
          char userIn='a';
      case NEW_OPTION:
-         while((userIn != 'e') && (EmpCounter < MAX_EMP_NUMBER) ){
+         while((userIn != 'e') && (EmpCounter < sizeOfStack) ){
          clearTreminal();
          gotoxy(0,1);
          printf("adding new emplee: \n");
@@ -207,9 +207,12 @@ int main()
     char user_input=DEFAULT_VAL;
     char arrowIterrator=DEFAULT_VAL;
     char menuLevel=DEFAULT_MENU_LEVEL;
+    int stackSize=0;
     //employee data base:::::::
-    Emp emp[MAX_EMP_NUMBER]={0};
-
+    //Emp emp[MAX_EMP_NUMBER]={0};
+    printf("Enter the stack size: ");
+    scanf("%d",&stackSize);
+    Emp * emp = (Emp *)malloc(stackSize*sizeof(Emp));
     //Init Menu
     menuDisplay(arrowIterrator);
     //program
@@ -240,7 +243,7 @@ int main()
                 menuDisplay(arrowIterrator);
             break;
             case HOT_KEY_ENTER:
-                takeAction(arrowIterrator,emp);
+                takeAction(arrowIterrator,emp,stackSize);
             break;
             }
         }//end of ---EXTENTED-KEY--- SWITCH
@@ -248,7 +251,7 @@ int main()
 		//start of ---NORMAL-KEY--- SWITCH
         switch(user_input){
         case HOT_KEY_ENTER:
-                user_input = takeAction(arrowIterrator,emp);
+                user_input = takeAction(arrowIterrator,emp,stackSize);
                 menuLevel++;
             break;
         case HOT_KEY_ESC:

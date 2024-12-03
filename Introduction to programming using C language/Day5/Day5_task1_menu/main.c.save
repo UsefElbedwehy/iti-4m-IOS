@@ -128,7 +128,7 @@ void SetColor(int ForgC){
      }
  }
  //for key actions
-int takeAction(int iterator,Emp e[]){
+int takeAction(int iterator,Emp e[], int sizeOfStack){
      switch(iterator){
          static EmpCounter=0;
          static displayC=0;
@@ -168,11 +168,10 @@ int takeAction(int iterator,Emp e[]){
          if(EmpCounter != 0){
 
              printf("Displaying the employee number %d: \n",displayC);
-             printf("--------------------------")
-             printf("| Employee name: %s  \t\t|\n",e[displayC].name);
-             printf("| Employee ID: %d    \t\t|\n",e[displayC].ID);
-             printf("| Employee salary: %d\t\t|\n",e[displayC].salary);
-             printf("| Employee %d-%d-%d  \t\t|\n",e[displayC].birth.day,e[displayC].birth.month,e[displayC].birth.year);
+             printf("Employee name: %s\n",e[displayC].name);
+             printf("Employee ID: %d\n",e[displayC].ID);
+             printf("Employee salary: %d\n",e[displayC].salary);
+             printf("Employee %d-%d-%d \n",e[displayC].birth.day,e[displayC].birth.month,e[displayC].birth.year);
 
          }else{
          printf("There is no any employee to display.\n");
@@ -208,9 +207,12 @@ int main()
     char user_input=DEFAULT_VAL;
     char arrowIterrator=DEFAULT_VAL;
     char menuLevel=DEFAULT_MENU_LEVEL;
+    int stackSize=0;
     //employee data base:::::::
-    Emp emp[MAX_EMP_NUMBER]={0};
-
+    //Emp emp[MAX_EMP_NUMBER]={0};
+    printf("Enter the stack size: ");
+    scanf("%d",&stackSize);
+    Emp * emp = (Emp *)malloc(stackSize*sizeof(Emp));
     //Init Menu
     menuDisplay(arrowIterrator);
     //program
