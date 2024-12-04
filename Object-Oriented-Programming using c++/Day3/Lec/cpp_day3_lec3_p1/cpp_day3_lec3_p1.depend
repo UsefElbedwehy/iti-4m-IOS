@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1733311358 source:/home/usef/iti-4m/Object-Oriented-Programming using c++/Day3/Lec/cpp_day3_lec3_p1/main.cpp
+	<iostream>
+	"Complex.h"
+
+1733301620 /home/usef/iti-4m/Object-Oriented-Programming using c++/Day3/Lec/cpp_day3_lec3_p1/include/Complex.h
+
