@@ -10,10 +10,10 @@ private: // for validation and data hidding
 public:
     Complex():real(0),img(0){
         counter++;
-        //cout << "Default Constructor" << endl;
+        cout << "Default Constructor" << endl;
     }
     Complex(double c1,double c2):real(c1),img(c2){
-        //cout << "Double Parameterized Constructor" << endl;
+        cout << "Double Parameterized Constructor" << endl;
     }
     void realSetter(double r){
         real = r;
@@ -139,12 +139,12 @@ public:
         this->img  -= cc.img;
         return *this;
     }
-    operator float(){
-        return (float)this->real;
+    operator float() const{
+        return (float)((float)(this->real)+0.0f);
     }
 
     ~Complex(){
-    //cout << "Destructor"<<endl;
+    cout << "Destructor"<<endl;
     }
 };
 
@@ -200,7 +200,8 @@ int main()
     c1.display();
     c1 ++ ; // c1--;
     c1.display();
-    (float)c1 ;
+    float res = (float)c1 ;
+    cout << "cast to float: " << res << endl;
     c1.display();
 
     return 0;

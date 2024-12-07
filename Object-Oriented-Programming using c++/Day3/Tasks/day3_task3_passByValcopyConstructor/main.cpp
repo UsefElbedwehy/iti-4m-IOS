@@ -100,7 +100,11 @@ public:
     void displayStackNumber(){
     cout << "Number of stacks are: " << stackCounter << endl;
     }
-    void operator=(Stack s){
+    Stack& operator=(const Stack &s){
+        if(this->data)
+        {
+            delete [] this->data;
+        }
         this->stackSize = s.stackSize;
         this->top = s.top;
         this->stackID = s.stackID;
@@ -109,6 +113,7 @@ public:
         for(i=0;i<(this->stackSize);i++){
             this->data[i] = s.data[i];
         }
+        return *this;
     }
 
     ~Stack(){
@@ -118,7 +123,10 @@ public:
     }
 };
 int Stack::stackCounter=0;
-
+Stack dop(){
+    Stack s;
+    return s;
+}
 
 //3- viewContent function once call by value and with copy constructor.
 void DisplayStack5(Stack s){
@@ -144,8 +152,8 @@ void DisplayStack5(Stack s){
 int main()
 {
     Stack S1(5);
-    Stack S2(5);
-    Stack S3(5);
+    Stack S2(S1);
+    Stack S3=S1;
     S1.push(10);
     S1.push(12);
     S1.push(14);
@@ -159,22 +167,26 @@ int main()
     S2.push(33);
     S2.push(334);
     S2.push(666);
-    DisplayStack5(S1);
-    DisplayStack5(S2);
-    DisplayStack5(S1);
-    DisplayStack5(S2);
-    //s2.operator=(s1);
+//    DisplayStack5(S1);
+//    DisplayStack5(S2);
+//    DisplayStack5(S1);
+//    DisplayStack5(S2);
+//    //s2.operator=(s1);
+    cout << "=========" << endl;
     S2=S1;
-    cout << "S2=S1" << endl;
+    cout << "=========" << endl;
+//    cout << "S2=S1" << endl;
+//    DisplayStack5(S1);
+//    DisplayStack5(S2);
+//    S2.push(644);
+//    S2.push(652);
+//    S1.push(802);
+//    S1.push(992);
     DisplayStack5(S1);
-    DisplayStack5(S2);
-    S2.push(644);
-    S2.push(652);
-    S1.push(802);
-    S1.push(992);
-    DisplayStack5(S1);
-    DisplayStack5(S2);
-    S1.displayStackNumber();
+
+    //S1=dop();
+//    DisplayStack5(S2);
+//    S1.displayStackNumber();
 
 
     return 0;
