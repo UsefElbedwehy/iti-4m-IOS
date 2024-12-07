@@ -34,14 +34,14 @@ private:
     Point p2;
 
 public:
-    Line():Point(int x1,int y1,int x2, int y2),p1(x1,y1),p2(x2,y2){
+    Line(int x1,int y1,int x2, int y2):p1(x1,y1),p2(x2,y2){
         cout << "[Line] Constructor" << endl;
     }
-    draw(){
+    void draw(){
         cout << "first point x-coordinate: " << p1.getX() << endl;
-        cout << "first point y-coordinate: " << p1.gety() << endl;
+        cout << "first point y-coordinate: " << p1.getY() << endl;
         cout << "second point x-coordinate: " << p2.getX() << endl;
-        cout << "second point y-coordinate: " << p2.gety() << endl;
+        cout << "second point y-coordinate: " << p2.getY() << endl;
         cout << "p1("<< p1.getX() <<","<< p1.getY() << ")"<< endl;
         cout << "p2("<< p2.getX() <<","<< p2.getY() << ")"<< endl;
         cout << "______________LINE________________" << endl;
@@ -58,14 +58,14 @@ private:
     Point lr;
 
 public:
-    Rectangle(Point p1,Point p2)ul(p1),lr(p2){
+    Rectangle(int x1,int y1,int x2, int y2):ul(x1,y1),lr(x2,y2){
         cout << "[Rectangle] Constructor" << endl;
     }
-    draw(){
+    void draw(){
         cout << "Upper Left Point : x-coordinate: " << ul.getX() << endl;
-        cout << "Upper Left Point : y-coordinate: " << ul.gety() << endl;
-        cout << "Lower Right Point: x-coordinate: " << lr.getx() << endl;
-        cout << "Lower Right Point: y-coordinate: " << lr.gety() << endl;
+        cout << "Upper Left Point : y-coordinate: " << ul.getY() << endl;
+        cout << "Lower Right Point: x-coordinate: " << lr.getX() << endl;
+        cout << "Lower Right Point: y-coordinate: " << lr.getY() << endl;
         cout << "_________________________" << endl;
         cout << "|                       |" << endl;
         cout << "|       RECTANGLE       |" << endl;
@@ -83,10 +83,10 @@ private:
     int radius;
 
 public:
-    Circle(Point p,int r):p1(p),radius(r){
+    Circle(int x,int y,int r):p1(x,y),radius(r){
         cout << "[Circle] Constractor" << endl;
     }
-    draw(){
+    void draw(){
         cout << "x-coordinate: " << p1.getX() << endl;
         cout << "y-coordinate: " << p1.getY() << endl;
         cout << "radius: " << radius << endl;
@@ -117,46 +117,21 @@ public:
         R = r;
         cout << "[PICTURE] Constructor" << endl;
     }
-    setLine(int lc,Line * l){
+    void setLine(int lc,Line * l){
         lineCount = lc;
         L = l;
     }
-    setCircle(int cc,Line * c){
+    void setCircle(int cc,Circle * c){
         circleCount = cc;
         C = c;
     }
-    setRectangle(int rc,Line * r){
+    void setRectangle(int rc,Rectangle * r){
         rectangleCount = rc;
         R = r;
     }
 
-    paint(){
-        int i=0;
-        cout << "Number of lines: " << lineCount << endl;
-        for(i=0;i<lineCount;i++){
-                cout << "ID: " << i << endl;
-                cout << "x1-coordinate: " << L.p1.getX()[i] << endl;
-                cout << "y1-coordinate: " << L.p1.getY()[i] << endl;
-                cout << "x2-coordinate: " << L.p2.getX()[i] << endl;
-                cout << "y2-coordinate: " << L.p2.getY()[i] << endl;
-        }
-        i=0;
-        cout << "Number of rectangles: " << rectangleCount << endl;
-        for(i=0;i<rectangleCount;i++){
-                cout << "ID: " << i << endl;
-                cout << "x1-coordinate: " << R.lr.getX() << endl;
-                cout << "y1-coordinate: " << R.lr.getY() << endl;
-                cout << "x2-coordinate: " << R.ul.getX() << endl;
-                cout << "y2-coordinate: " << R.ul.getY() << endl;
-        }
-        i=0;
-        cout << "Number of circles: " << circleCount << endl;
-        for(i=0;i<circleCount;i++){
-                cout << "ID: " << i << endl;
-                cout << "x1-coordinate: " << C.p1.getX() << endl;
-                cout << "y1-coordinate: " << C.p1.getY() << endl;
-                cout << "raduis: " << C.radius << endl;
-        }
+    void paint(){
+        cout << "Paint" << endl;
     }
 
     ~Picture(){
@@ -166,10 +141,19 @@ public:
 
 int main()
 {
-    Point p;
+    //Point p(0,0);
+    //point  con
+    //point  con
+    //line   con
     Line        line(2,3,4,5);
-    Circle      cir(p);
-    Rectangle   rec();
+    //point  con
+    //circle con
+    Circle      cir(1,2,3);
+    //point  con
+    //point  con
+    //rect   con
+    Rectangle   rec(1,2,3,4);
+    //pic    con
     Picture pic(1,1,1,&line,&cir,&rec);
 
 
@@ -179,3 +163,4 @@ int main()
 
     return 0;
 }
+
