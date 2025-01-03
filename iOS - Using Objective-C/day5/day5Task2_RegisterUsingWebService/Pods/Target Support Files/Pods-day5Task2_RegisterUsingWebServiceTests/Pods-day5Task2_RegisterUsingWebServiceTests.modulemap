@@ -1,0 +1,6 @@
+framework module Pods_day5Task2_RegisterUsingWebServiceTests {
+  umbrella header "Pods-day5Task2_RegisterUsingWebServiceTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
