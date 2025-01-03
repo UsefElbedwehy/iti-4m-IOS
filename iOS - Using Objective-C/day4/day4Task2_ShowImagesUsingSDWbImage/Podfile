@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+target 'day4Task2_ShowImagesUsingSDWbImage' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'SDWebImage', '~> 5.0'
+
+  # Pods for day4Task2_ShowImagesUsingSDWbImage
+
+  target 'day4Task2_ShowImagesUsingSDWbImageTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'day4Task2_ShowImagesUsingSDWbImageUITests' do
+    # Pods for testing
+  end
+
+end

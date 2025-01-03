@@ -1,0 +1,6 @@
+framework module Pods_day4Task2_ShowImagesUsingSDWbImage_day4Task2_ShowImagesUsingSDWbImageUITests {
+  umbrella header "Pods-day4Task2_ShowImagesUsingSDWbImage-day4Task2_ShowImagesUsingSDWbImageUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

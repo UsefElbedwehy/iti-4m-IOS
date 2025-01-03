@@ -1,0 +1,709 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23D12F767DBC4FAE1C9C9743 /* Pods_day4Task2_ShowImagesUsingSDWbImage_day4Task2_ShowImagesUsingSDWbImageUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 589909702985E49103B087AA /* Pods_day4Task2_ShowImagesUsingSDWbImage_day4Task2_ShowImagesUsingSDWbImageUITests.framework */; };
+		30E81BA7A9A6965D7BECD6DA /* Pods_day4Task2_ShowImagesUsingSDWbImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5073220061E9793DD6E2F335 /* Pods_day4Task2_ShowImagesUsingSDWbImage.framework */; };
+		DEFE570861AF4B45A7D74DD9 /* Pods_day4Task2_ShowImagesUsingSDWbImageTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6DED072C0FF0511EA7CCCB /* Pods_day4Task2_ShowImagesUsingSDWbImageTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C47636B02D18C2AD001565FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C476368C2D18C2AC001565FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C47636932D18C2AC001565FB;
+			remoteInfo = day4Task2_ShowImagesUsingSDWbImage;
+		};
+		C47636BA2D18C2AD001565FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C476368C2D18C2AC001565FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C47636932D18C2AC001565FB;
+			remoteInfo = day4Task2_ShowImagesUsingSDWbImage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3B6DED072C0FF0511EA7CCCB /* Pods_day4Task2_ShowImagesUsingSDWbImageTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_day4Task2_ShowImagesUsingSDWbImageTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BA6470093D674CC8ACD6E9D /* Pods-day4Task2_ShowImagesUsingSDWbImageTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-day4Task2_ShowImagesUsingSDWbImageTests.debug.xcconfig"; path = "Target Support Files/Pods-day4Task2_ShowImagesUsingSDWbImageTests/Pods-day4Task2_ShowImagesUsingSDWbImageTests.debug.xcconfig"; sourceTree = "<group>"; };
+		47FBB924FD82D752FAE65764 /* Pods-day4Task2_ShowImagesUsingSDWbImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-day4Task2_ShowImagesUsingSDWbImage.debug.xcconfig"; path = "Target Support Files/Pods-day4Task2_ShowImagesUsingSDWbImage/Pods-day4Task2_ShowImagesUsingSDWbImage.debug.xcconfig"; sourceTree = "<group>"; };
+		5073220061E9793DD6E2F335 /* Pods_day4Task2_ShowImagesUsingSDWbImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_day4Task2_ShowImagesUsingSDWbImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		589909702985E49103B087AA /* Pods_day4Task2_ShowImagesUsingSDWbImage_day4Task2_ShowImagesUsingSDWbImageUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_day4Task2_ShowImagesUsingSDWbImage_day4Task2_ShowImagesUsingSDWbImageUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		749F89B2D38D5F66BFA6268D /* Pods-day4Task2_ShowImagesUsingSDWbImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-day4Task2_ShowImagesUsingSDWbImage.release.xcconfig"; path = "Target Support Files/Pods-day4Task2_ShowImagesUsingSDWbImage/Pods-day4Task2_ShowImagesUsingSDWbImage.release.xcconfig"; sourceTree = "<group>"; };
+		A2274DD4079E3075D2546D48 /* Pods-day4Task2_ShowImagesUsingSDWbImageTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-day4Task2_ShowImagesUsingSDWbImageTests.release.xcconfig"; path = "Target Support Files/Pods-day4Task2_ShowImagesUsingSDWbImageTests/Pods-day4Task2_ShowImagesUsingSDWbImageTests.release.xcconfig"; sourceTree = "<group>"; };
+		C47636942D18C2AC001565FB /* day4Task2_ShowImagesUsingSDWbImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = day4Task2_ShowImagesUsingSDWbImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C47636AF2D18C2AD001565FB /* day4Task2_ShowImagesUsingSDWbImageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = day4Task2_ShowImagesUsingSDWbImageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C47636B92D18C2AD001565FB /* day4Task2_ShowImagesUsingSDWbImageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = day4Task2_ShowImagesUsingSDWbImageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0DDB9BAF7B428B41A797CFE /* Pods-day4Task2_ShowImagesUsingSDWbImage-day4Task2_ShowImagesUsingSDWbImageUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-day4Task2_ShowImagesUsingSDWbImage-day4Task2_ShowImagesUsingSDWbImageUITests.debug.xcconfig"; path = "Target Support Files/Pods-day4Task2_ShowImagesUsingSDWbImage-day4Task2_ShowImagesUsingSDWbImageUITests/Pods-day4Task2_ShowImagesUsingSDWbImage-day4Task2_ShowImagesUsingSDWbImageUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FBB975C780E74E16247126FD /* Pods-day4Task2_ShowImagesUsingSDWbImage-day4Task2_ShowImagesUsingSDWbImageUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-day4Task2_ShowImagesUsingSDWbImage-day4Task2_ShowImagesUsingSDWbImageUITests.release.xcconfig"; path = "Target Support Files/Pods-day4Task2_ShowImagesUsingSDWbImage-day4Task2_ShowImagesUsingSDWbImageUITests/Pods-day4Task2_ShowImagesUsingSDWbImage-day4Task2_ShowImagesUsingSDWbImageUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C47636C12D18C2AD001565FB /* Exceptions for "day4Task2_ShowImagesUsingSDWbImage" folder in "day4Task2_ShowImagesUsingSDWbImage" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = C47636932D18C2AC001565FB /* day4Task2_ShowImagesUsingSDWbImage */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		C47636962D18C2AC001565FB /* day4Task2_ShowImagesUsingSDWbImage */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C47636C12D18C2AD001565FB /* Exceptions for "day4Task2_ShowImagesUsingSDWbImage" folder in "day4Task2_ShowImagesUsingSDWbImage" target */,
+			);
+			path = day4Task2_ShowImagesUsingSDWbImage;
+			sourceTree = "<group>";
+		};
+		C47636B22D18C2AD001565FB /* day4Task2_ShowImagesUsingSDWbImageTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = day4Task2_ShowImagesUsingSDWbImageTests;
+			sourceTree = "<group>";
+		};
+		C47636BC2D18C2AD001565FB /* day4Task2_ShowImagesUsingSDWbImageUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = day4Task2_ShowImagesUsingSDWbImageUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C47636912D18C2AC001565FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30E81BA7A9A6965D7BECD6DA /* Pods_day4Task2_ShowImagesUsingSDWbImage.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C47636AC2D18C2AD001565FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEFE570861AF4B45A7D74DD9 /* Pods_day4Task2_ShowImagesUsingSDWbImageTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C47636B62D18C2AD001565FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23D12F767DBC4FAE1C9C9743 /* Pods_day4Task2_ShowImagesUsingSDWbImage_day4Task2_ShowImagesUsingSDWbImageUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04D544800B2B4020F3D92A36 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47FBB924FD82D752FAE65764 /* Pods-day4Task2_ShowImagesUsingSDWbImage.debug.xcconfig */,
+				749F89B2D38D5F66BFA6268D /* Pods-day4Task2_ShowImagesUsingSDWbImage.release.xcconfig */,
+				E0DDB9BAF7B428B41A797CFE /* Pods-day4Task2_ShowImagesUsingSDWbImage-day4Task2_ShowImagesUsingSDWbImageUITests.debug.xcconfig */,
+				FBB975C780E74E16247126FD /* Pods-day4Task2_ShowImagesUsingSDWbImage-day4Task2_ShowImagesUsingSDWbImageUITests.release.xcconfig */,
+				3BA6470093D674CC8ACD6E9D /* Pods-day4Task2_ShowImagesUsingSDWbImageTests.debug.xcconfig */,
+				A2274DD4079E3075D2546D48 /* Pods-day4Task2_ShowImagesUsingSDWbImageTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C476368B2D18C2AC001565FB = {
+			isa = PBXGroup;
+			children = (
+				C47636962D18C2AC001565FB /* day4Task2_ShowImagesUsingSDWbImage */,
+				C47636B22D18C2AD001565FB /* day4Task2_ShowImagesUsingSDWbImageTests */,
+				C47636BC2D18C2AD001565FB /* day4Task2_ShowImagesUsingSDWbImageUITests */,
+				C47636952D18C2AC001565FB /* Products */,
+				04D544800B2B4020F3D92A36 /* Pods */,
+				DBD5B05E93516F642E687089 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C47636952D18C2AC001565FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C47636942D18C2AC001565FB /* day4Task2_ShowImagesUsingSDWbImage.app */,
+				C47636AF2D18C2AD001565FB /* day4Task2_ShowImagesUsingSDWbImageTests.xctest */,
+				C47636B92D18C2AD001565FB /* day4Task2_ShowImagesUsingSDWbImageUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBD5B05E93516F642E687089 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5073220061E9793DD6E2F335 /* Pods_day4Task2_ShowImagesUsingSDWbImage.framework */,
+				589909702985E49103B087AA /* Pods_day4Task2_ShowImagesUsingSDWbImage_day4Task2_ShowImagesUsingSDWbImageUITests.framework */,
+				3B6DED072C0FF0511EA7CCCB /* Pods_day4Task2_ShowImagesUsingSDWbImageTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C47636932D18C2AC001565FB /* day4Task2_ShowImagesUsingSDWbImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C47636C22D18C2AD001565FB /* Build configuration list for PBXNativeTarget "day4Task2_ShowImagesUsingSDWbImage" */;
+			buildPhases = (
+				88F4CF98637BBBA0704E3BD6 /* [CP] Check Pods Manifest.lock */,
+				C47636902D18C2AC001565FB /* Sources */,
+				C47636912D18C2AC001565FB /* Frameworks */,
+				C47636922D18C2AC001565FB /* Resources */,
+				C1497231A3E5A6F4D3D001A3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C47636962D18C2AC001565FB /* day4Task2_ShowImagesUsingSDWbImage */,
+			);
+			name = day4Task2_ShowImagesUsingSDWbImage;
+			productName = day4Task2_ShowImagesUsingSDWbImage;
+			productReference = C47636942D18C2AC001565FB /* day4Task2_ShowImagesUsingSDWbImage.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C47636AE2D18C2AD001565FB /* day4Task2_ShowImagesUsingSDWbImageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C47636C72D18C2AD001565FB /* Build configuration list for PBXNativeTarget "day4Task2_ShowImagesUsingSDWbImageTests" */;
+			buildPhases = (
+				75FD7A62ED1421BAF3106330 /* [CP] Check Pods Manifest.lock */,
+				C47636AB2D18C2AD001565FB /* Sources */,
+				C47636AC2D18C2AD001565FB /* Frameworks */,
+				C47636AD2D18C2AD001565FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C47636B12D18C2AD001565FB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				C47636B22D18C2AD001565FB /* day4Task2_ShowImagesUsingSDWbImageTests */,
+			);
+			name = day4Task2_ShowImagesUsingSDWbImageTests;
+			productName = day4Task2_ShowImagesUsingSDWbImageTests;
+			productReference = C47636AF2D18C2AD001565FB /* day4Task2_ShowImagesUsingSDWbImageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C47636B82D18C2AD001565FB /* day4Task2_ShowImagesUsingSDWbImageUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C47636CA2D18C2AD001565FB /* Build configuration list for PBXNativeTarget "day4Task2_ShowImagesUsingSDWbImageUITests" */;
+			buildPhases = (
+				3F5B1D094E255E3F8832B879 /* [CP] Check Pods Manifest.lock */,
+				C47636B52D18C2AD001565FB /* Sources */,
+				C47636B62D18C2AD001565FB /* Frameworks */,
+				C47636B72D18C2AD001565FB /* Resources */,
+				951CEBB80619C1A20209031E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C47636BB2D18C2AD001565FB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				C47636BC2D18C2AD001565FB /* day4Task2_ShowImagesUsingSDWbImageUITests */,
+			);
+			name = day4Task2_ShowImagesUsingSDWbImageUITests;
+			productName = day4Task2_ShowImagesUsingSDWbImageUITests;
+			productReference = C47636B92D18C2AD001565FB /* day4Task2_ShowImagesUsingSDWbImageUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C476368C2D18C2AC001565FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					C47636932D18C2AC001565FB = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					C47636AE2D18C2AD001565FB = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = C47636932D18C2AC001565FB;
+					};
+					C47636B82D18C2AD001565FB = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = C47636932D18C2AC001565FB;
+					};
+				};
+			};
+			buildConfigurationList = C476368F2D18C2AC001565FB /* Build configuration list for PBXProject "day4Task2_ShowImagesUsingSDWbImage" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C476368B2D18C2AC001565FB;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C47636952D18C2AC001565FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C47636932D18C2AC001565FB /* day4Task2_ShowImagesUsingSDWbImage */,
+				C47636AE2D18C2AD001565FB /* day4Task2_ShowImagesUsingSDWbImageTests */,
+				C47636B82D18C2AD001565FB /* day4Task2_ShowImagesUsingSDWbImageUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C47636922D18C2AC001565FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C47636AD2D18C2AD001565FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C47636B72D18C2AD001565FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F5B1D094E255E3F8832B879 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-day4Task2_ShowImagesUsingSDWbImage-day4Task2_ShowImagesUsingSDWbImageUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75FD7A62ED1421BAF3106330 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-day4Task2_ShowImagesUsingSDWbImageTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88F4CF98637BBBA0704E3BD6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-day4Task2_ShowImagesUsingSDWbImage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		951CEBB80619C1A20209031E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-day4Task2_ShowImagesUsingSDWbImage-day4Task2_ShowImagesUsingSDWbImageUITests/Pods-day4Task2_ShowImagesUsingSDWbImage-day4Task2_ShowImagesUsingSDWbImageUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-day4Task2_ShowImagesUsingSDWbImage-day4Task2_ShowImagesUsingSDWbImageUITests/Pods-day4Task2_ShowImagesUsingSDWbImage-day4Task2_ShowImagesUsingSDWbImageUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-day4Task2_ShowImagesUsingSDWbImage-day4Task2_ShowImagesUsingSDWbImageUITests/Pods-day4Task2_ShowImagesUsingSDWbImage-day4Task2_ShowImagesUsingSDWbImageUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1497231A3E5A6F4D3D001A3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-day4Task2_ShowImagesUsingSDWbImage/Pods-day4Task2_ShowImagesUsingSDWbImage-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-day4Task2_ShowImagesUsingSDWbImage/Pods-day4Task2_ShowImagesUsingSDWbImage-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-day4Task2_ShowImagesUsingSDWbImage/Pods-day4Task2_ShowImagesUsingSDWbImage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C47636902D18C2AC001565FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C47636AB2D18C2AD001565FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C47636B52D18C2AD001565FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C47636B12D18C2AD001565FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C47636932D18C2AC001565FB /* day4Task2_ShowImagesUsingSDWbImage */;
+			targetProxy = C47636B02D18C2AD001565FB /* PBXContainerItemProxy */;
+		};
+		C47636BB2D18C2AD001565FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C47636932D18C2AC001565FB /* day4Task2_ShowImagesUsingSDWbImage */;
+			targetProxy = C47636BA2D18C2AD001565FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C47636C32D18C2AD001565FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47FBB924FD82D752FAE65764 /* Pods-day4Task2_ShowImagesUsingSDWbImage.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = day4Task2_ShowImagesUsingSDWbImage/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "iti.day4Task2-ShowImagesUsingSDWbImage";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C47636C42D18C2AD001565FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 749F89B2D38D5F66BFA6268D /* Pods-day4Task2_ShowImagesUsingSDWbImage.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = day4Task2_ShowImagesUsingSDWbImage/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "iti.day4Task2-ShowImagesUsingSDWbImage";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C47636C52D18C2AD001565FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C47636C62D18C2AD001565FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C47636C82D18C2AD001565FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BA6470093D674CC8ACD6E9D /* Pods-day4Task2_ShowImagesUsingSDWbImageTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "iti.day4Task2-ShowImagesUsingSDWbImageTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/day4Task2_ShowImagesUsingSDWbImage.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/day4Task2_ShowImagesUsingSDWbImage";
+			};
+			name = Debug;
+		};
+		C47636C92D18C2AD001565FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2274DD4079E3075D2546D48 /* Pods-day4Task2_ShowImagesUsingSDWbImageTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "iti.day4Task2-ShowImagesUsingSDWbImageTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/day4Task2_ShowImagesUsingSDWbImage.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/day4Task2_ShowImagesUsingSDWbImage";
+			};
+			name = Release;
+		};
+		C47636CB2D18C2AD001565FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0DDB9BAF7B428B41A797CFE /* Pods-day4Task2_ShowImagesUsingSDWbImage-day4Task2_ShowImagesUsingSDWbImageUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "iti.day4Task2-ShowImagesUsingSDWbImageUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = day4Task2_ShowImagesUsingSDWbImage;
+			};
+			name = Debug;
+		};
+		C47636CC2D18C2AD001565FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBB975C780E74E16247126FD /* Pods-day4Task2_ShowImagesUsingSDWbImage-day4Task2_ShowImagesUsingSDWbImageUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "iti.day4Task2-ShowImagesUsingSDWbImageUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = day4Task2_ShowImagesUsingSDWbImage;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C476368F2D18C2AC001565FB /* Build configuration list for PBXProject "day4Task2_ShowImagesUsingSDWbImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C47636C52D18C2AD001565FB /* Debug */,
+				C47636C62D18C2AD001565FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C47636C22D18C2AD001565FB /* Build configuration list for PBXNativeTarget "day4Task2_ShowImagesUsingSDWbImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C47636C32D18C2AD001565FB /* Debug */,
+				C47636C42D18C2AD001565FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C47636C72D18C2AD001565FB /* Build configuration list for PBXNativeTarget "day4Task2_ShowImagesUsingSDWbImageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C47636C82D18C2AD001565FB /* Debug */,
+				C47636C92D18C2AD001565FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C47636CA2D18C2AD001565FB /* Build configuration list for PBXNativeTarget "day4Task2_ShowImagesUsingSDWbImageUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C47636CB2D18C2AD001565FB /* Debug */,
+				C47636CC2D18C2AD001565FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C476368C2D18C2AC001565FB /* Project object */;
+}
