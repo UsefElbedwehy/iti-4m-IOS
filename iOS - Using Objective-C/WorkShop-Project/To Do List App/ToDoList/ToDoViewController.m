@@ -10,6 +10,7 @@
 #import "AddViewController.h"
 #import "DisplayViewController.h"
 #import "NSUserDefaults+NSUserDefaults_CustomUserDefaults.h"
+#import "UserNotifications/UserNotifications.h"
 //------priority macros-------------
 #define HIGH_PRIO 0
 #define MID_PRIO  1
@@ -26,10 +27,13 @@
 
 @property NSMutableArray<NSString *> * priorityArr;
 @property NSArray       <NSString *> * prioImgArray;
-
-@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property NSMutableArray<ToDoList *> * filteredTasks;
+
 @property BOOL isFiltered;
+
+@property (strong, nonatomic) UISearchBar * searchBar;
+@property (nonatomic, strong, readwrite) UISearchController * searchController;
+
 @end
 
 @implementation ToDoViewController
@@ -40,7 +44,23 @@
     [NSUserDefaults retrieveUserDefualts:_allTasksInProgress ForKey:@"toDoListInProgress"];
     [NSUserDefaults convertArray:_allTasks ToThreePrioArrWithHighArr:_highPrioArray andMidArr:_midPrioArray andLowArr:_lowPrioArray];
     [self addRightAddBtn];
-    
+    [self addSearchBarToMyTable];
+
+    [self scheduleNotificationForDate:[_allTasks objectAtIndex:([_allTasks count]-1)].endDate withTitle:@"Task Reminder" body:@"This is the task's deadline!"];
+    NSLog(@"%@",[_allTasks objectAtIndex:([_allTasks count]-1)].endDate);
+}
+- (void) addSearchBarToMyTable{
+    self.searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, 320, 44)];
+    self.searchBar.showsCancelButton = YES;
+    [self.view addSubview:self.searchBar];
+    self.searchBar.delegate = self;
+    //self.myTableView.contentInset = UIEdgeInsetsMake(self.searchBar.frame.size.height-50,0, 0, 0);
+    [self.myTableView setTableHeaderView:self.searchBar];
+    _myTableView.contentOffset = CGPointMake( 0,  (_myTableView.tableHeaderView.frame.size.height));
+    [self.searchDisplayController setActive:NO animated:YES];
+}
+- (BOOL)hidesSearchBarWhenScrolling{
+return TRUE;
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -48,6 +68,7 @@
     [NSUserDefaults retrieveUserDefualts:_allTasks ForKey:@"toDoList"];
     [NSUserDefaults retrieveUserDefualts:_allTasksInProgress ForKey:@"toDoListInProgress"];
     [NSUserDefaults convertArray:_allTasks ToThreePrioArrWithHighArr:_highPrioArray andMidArr:_midPrioArray andLowArr:_lowPrioArray];
+    _myTableView.contentOffset = CGPointMake( 0,  (_myTableView.tableHeaderView.frame.size.height));
     [self.myTableView reloadData];
 }
 -(void) initArrays{
@@ -175,17 +196,23 @@
    /* Section header is in 0th index... */
    [label setText:string];
    [view addSubview:label];
-    switch (section) {
-        case HIGH_PRIO:
-            [view setBackgroundColor:[UIColor colorWithRed:255/255.0 green:130/255.0 blue:130/255.0 alpha:1.0]];
-            break;
-        case MID_PRIO:
-            [view setBackgroundColor:[UIColor colorWithRed:245/255.0 green:245/255.0 blue:150/255.0 alpha:1.0]];
-            break;
-        case LOW_PRIO:
-            [view setBackgroundColor:[UIColor colorWithRed:150/255.0 green:255/255.0 blue:150/255.0 alpha:1.0]];
-            break;
+    if(_isFiltered){
+        [view setBackgroundColor:[UIColor colorWithRed:130/255.0 green:130/255.0 blue:240/255.0 alpha:1.0]];
+        [label setText:@"Matching tasks"];
+    }else{
+        switch (section) {
+            case HIGH_PRIO:
+                [view setBackgroundColor:[UIColor colorWithRed:255/255.0 green:130/255.0 blue:130/255.0 alpha:1.0]];
+                break;
+            case MID_PRIO:
+                [view setBackgroundColor:[UIColor colorWithRed:245/255.0 green:245/255.0 blue:150/255.0 alpha:1.0]];
+                break;
+            case LOW_PRIO:
+                [view setBackgroundColor:[UIColor colorWithRed:150/255.0 green:255/255.0 blue:150/255.0 alpha:1.0]];
+                break;
+        }
     }
+    
    return view;
 }
 
@@ -198,16 +225,20 @@
     ToDoList * todoObj = [[ToDoList alloc] init];
     [dVC setNextStageID:@"InProg"];
     [dVC setInProgDelegete:self];
-    switch (indexPath.section) {
-        case HIGH_PRIO:
-            [todoObj setWithObject:[_highPrioArray objectAtIndex:indexPath.row]];
-            break;
-        case MID_PRIO:
-            [todoObj setWithObject:[_midPrioArray objectAtIndex:indexPath.row]];
-            break;
-        case LOW_PRIO:
-            [todoObj setWithObject:[_lowPrioArray objectAtIndex:indexPath.row]];
-            break;
+    if (_isFiltered) {
+        [todoObj setWithObject:[_filteredTasks objectAtIndex:indexPath.row]];
+    }else{
+        switch (indexPath.section) {
+            case HIGH_PRIO:
+                [todoObj setWithObject:[_highPrioArray objectAtIndex:indexPath.row]];
+                break;
+            case MID_PRIO:
+                [todoObj setWithObject:[_midPrioArray objectAtIndex:indexPath.row]];
+                break;
+            case LOW_PRIO:
+                [todoObj setWithObject:[_lowPrioArray objectAtIndex:indexPath.row]];
+                break;
+        }
     }
     [dVC setToDoObj:todoObj];
     [self.navigationController pushViewController:dVC animated:YES];
@@ -262,5 +293,34 @@
     [NSUserDefaults convertArray:_allTasks ToThreePrioArrWithHighArr:_highPrioArray andMidArr:_midPrioArray andLowArr:_lowPrioArray];
     [self.myTableView reloadData];
 }
+
+- (void)scheduleNotificationForDate:(NSDate *)date withTitle:(NSString *)title body:(NSString *)body {
+    // Create the notification content
+    UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
+    content.title = title;
+    content.body = body;
+    content.sound = [UNNotificationSound defaultSound];
+    
+    // Create the trigger based on date components
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *dateComponents = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond)
+                                                   fromDate:date];
+    UNCalendarNotificationTrigger *trigger = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:dateComponents repeats:NO];
+    
+    // Create and add the notification request
+    NSString *identifier = @"LocalNotificationIdentifier";
+    UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:identifier content:content trigger:trigger];
+    
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    [center addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
+        if (error != nil) {
+            NSLog(@"Error scheduling notification: %@", error.localizedDescription);
+        } else {
+            NSLog(@"Notification scheduled successfully!");
+        }
+    }];
+}
+
+
 
 @end
