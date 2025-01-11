@@ -1,43 +1,41 @@
 //
 //  MovieTableViewController.swift
-//  task1
+//  day2_task2
 //
-//  Created by Uef on 11/01/2025.
+//  Created by Uef on 08/01/2025.
 //
 
 import UIKit
 
 class MovieTableViewController: UITableViewController , MovieDelegete {
-    var movieArr = [Movie]()
-    func addMovieToTableView(_ movie: Movie) {
-        movieArr.append(movie)
-        tableView.reloadData()
-    }
-    
-
+    var mov:[Movie]!
     override func viewDidLoad() {
         super.viewDidLoad()
-        initMovieArr()
+        mov = [Movie]()
+        mov.append(Movie(forTitle: "Forrest Gump", forImage: "FG.jpeg", forRating: 3.2, forRYear: 2024, forGenre: ["action","drama"]))
+        mov.append(Movie(forTitle: "Inception", forImage: "IN.avif", forRating: 4.8, forRYear: 2020, forGenre: ["comedy","drama"]))
+         mov.append(Movie(forTitle: "The Matrix", forImage: "TM.jpeg", forRating: 7.9, forRYear: 2018, forGenre: ["action","comedy"]))
+         mov.append(Movie(forTitle: "Titanic", forImage: "TIT.avif", forRating: 4.2, forRYear: 2019, forGenre: ["drama","drama"]))
+         mov.append(Movie(forTitle: "The Dark Knight", forImage: "DN2.jpeg", forRating: 8.6, forRYear: 2021, forGenre: ["action","action"]))
+    
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "add", style: .plain, target: self, action: #selector(addMovie))
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        //self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    @objc func addMovie()  {
-        let aVC = self.storyboard?.instantiateViewController(withIdentifier: "addVC") as! AddViewController
-        aVC.movieDelegete = self
-        self.navigationController?.pushViewController(aVC, animated: true)
+    
+    @objc func addMovie() {
+        let tVC = self.storyboard?.instantiateViewController(identifier: "thirdVC") as! ThirdViewController
+        tVC.myProtocol = self
+        self.navigationController?.pushViewController(tVC, animated: true)
     }
-    func initMovieArr()  {
-        movieArr.append(Movie(title: "MR Robot", rating: 9.2, releaseYear: 2022, genre: "Drama", image: "MRR2.jpeg"))
-        movieArr.append(Movie(title: "FAst and Furious", rating: 7.3, releaseYear: 2002, genre: "Action", image: "FAF.jpeg"))
-        movieArr.append(Movie(title: "RED 2", rating: 8.8, releaseYear: 2023, genre: "Comedy", image: "RED.jpeg"))
-        movieArr.append(Movie(title: "The Transformers", rating: 5.7, releaseYear: 2021, genre: "Horror", image: "TRANS.jpeg"))
-        movieArr.append(Movie(title: "The Transporter", rating: 6.5, releaseYear: 2001, genre: "Romance", image: "TP.jpeg"))
+    func addMovieToTable(_ movie: Movie){
+        mov.append(movie)
+        tableView.reloadData()
     }
-
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -47,24 +45,23 @@ class MovieTableViewController: UITableViewController , MovieDelegete {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return movieArr.count
+        return mov.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
-        // Configure the cell...
-        cell.textLabel?.text = movieArr[indexPath.row].title
-        
+        cell.textLabel?.text = mov[indexPath.row].title
+
         return cell
     }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let dVC = self.storyboard?.instantiateViewController(identifier: "displayVC") as! DisplayViewController
-        dVC.movieD = movieArr[indexPath.row]
-        self.navigationController?.pushViewController(dVC, animated: true)
+        let sVC = self.storyboard?.instantiateViewController(withIdentifier: "second") as! SecondViewController
+        sVC.movie = mov[indexPath.row]
+        self.navigationController?.pushViewController(sVC, animated: true)
     }
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
