@@ -40,14 +40,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initArrays];
-    [NSUserDefaults retrieveUserDefualts:_allTasks ForKey:@"toDoList"];
-    [NSUserDefaults retrieveUserDefualts:_allTasksInProgress ForKey:@"toDoListInProgress"];
-    [NSUserDefaults convertArray:_allTasks ToThreePrioArrWithHighArr:_highPrioArray andMidArr:_midPrioArray andLowArr:_lowPrioArray];
+    [self retrieveAndProcessData];
     [self addRightAddBtn];
     [self addSearchBarToMyTable];
-
-    [self scheduleNotificationForDate:[_allTasks objectAtIndex:([_allTasks count]-1)].endDate withTitle:@"Task Reminder" body:@"This is the task's deadline!"];
-    NSLog(@"%@",[_allTasks objectAtIndex:([_allTasks count]-1)].endDate);
+    [self setAllEndTaskDateNotifications];
 }
 - (void) addSearchBarToMyTable{
     self.searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, 320, 44)];
@@ -60,16 +56,23 @@
     [self.searchDisplayController setActive:NO animated:YES];
 }
 - (BOOL)hidesSearchBarWhenScrolling{
-return TRUE;
+    return TRUE;
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self addRightAddBtn];
+    [self retrieveAndProcessData];
+    [self rehideTheSearchBar];
+    [self setAllEndTaskDateNotifications];
+    [self.myTableView reloadData];
+}
+-(void) rehideTheSearchBar{
+    _myTableView.contentOffset = CGPointMake( 0,  (_myTableView.tableHeaderView.frame.size.height));
+}
+-(void) retrieveAndProcessData{
     [NSUserDefaults retrieveUserDefualts:_allTasks ForKey:@"toDoList"];
     [NSUserDefaults retrieveUserDefualts:_allTasksInProgress ForKey:@"toDoListInProgress"];
     [NSUserDefaults convertArray:_allTasks ToThreePrioArrWithHighArr:_highPrioArray andMidArr:_midPrioArray andLowArr:_lowPrioArray];
-    _myTableView.contentOffset = CGPointMake( 0,  (_myTableView.tableHeaderView.frame.size.height));
-    [self.myTableView reloadData];
 }
 -(void) initArrays{
     _allTasks = [NSMutableArray<ToDoList *> new];
@@ -89,7 +92,7 @@ return TRUE;
         [_filteredTasks removeAllObjects];
         _isFiltered = TRUE;
         for (int i=0; i<[_allTasks count]; i++) {
-            if ([[_allTasks objectAtIndex:i].name containsString:searchText.lowercaseString] == TRUE) {
+            if ([[_allTasks objectAtIndex:i].name containsString:searchText] == TRUE) {
                [_filteredTasks addObject:[_allTasks objectAtIndex:i]];
             }
         }
@@ -321,6 +324,13 @@ return TRUE;
     }];
 }
 
-
+-(void) setAllEndTaskDateNotifications{
+    for(int index=0 ; index < [_allTasks count] ; index++){
+        NSMutableString * notificationTitle = [[NSMutableString alloc] initWithString:[_allTasks objectAtIndex:index].name];
+        [notificationTitle stringByAppendingString:@" Reminder"];
+        [self scheduleNotificationForDate:[_allTasks objectAtIndex:index].endDate withTitle:notificationTitle body:@"This is the task's deadline!"];
+        NSLog(@"%@",[_allTasks objectAtIndex:index].endDate);
+    }
+}
 
 @end

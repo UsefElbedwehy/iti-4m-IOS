@@ -78,6 +78,41 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        NSString * nameStr =@"";
+        if (_IsSorted) {
+            switch (indexPath.section) {
+                case HIGH_PRIO:
+                    nameStr = [_highPrioArrayInProg objectAtIndex:indexPath.row].name;
+                    [_highPrioArrayInProg removeObjectAtIndex:indexPath.row];
+                    break;
+                case MID_PRIO:
+                    nameStr = [_midPrioArrayInProg objectAtIndex:indexPath.row].name;
+                    [_midPrioArrayInProg removeObjectAtIndex:indexPath.row];
+                    break;
+                case LOW_PRIO:
+                    nameStr = [_lowPrioArrayInProg objectAtIndex:indexPath.row].name;
+                    [_lowPrioArrayInProg removeObjectAtIndex:indexPath.row];
+                    break;
+            }
+            [NSUserDefaults removeObjectFromArray:_allTasksInProg ByString:nameStr];
+        }else{
+            [_allTasksInProg removeObjectAtIndex:indexPath.row];
+        }
+        [NSUserDefaults updateUserDefaults:_allTasksInProg ForKey:@"toDoListInProgress"];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+    }
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 65;
 }
@@ -183,10 +218,6 @@
    return view;
 }
 
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     DisplayViewController * dVC = [self.storyboard instantiateViewControllerWithIdentifier:@"DisplayVC"];
     ToDoList * todoObj = [[ToDoList alloc] init];
