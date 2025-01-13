@@ -1,0 +1,6 @@
+framework module Pods_task2Tests {
+  umbrella header "Pods-task2Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

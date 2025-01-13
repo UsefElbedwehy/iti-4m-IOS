@@ -1,0 +1,6 @@
+framework module Pods_task2_task2UITests {
+  umbrella header "Pods-task2-task2UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
