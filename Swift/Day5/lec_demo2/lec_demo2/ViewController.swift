@@ -34,7 +34,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate , UINavi
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let img = info[UIImagePickerController.InfoKey.originalImage]
+        
+        //print("\(info.values)")
+
         imgView.image = img as? UIImage
+        let imageData:NSData = imgView.image!.pngData()! as NSData
+        print("\(imageData)")
         self.dismiss(animated: true, completion: nil)
     }
 }
