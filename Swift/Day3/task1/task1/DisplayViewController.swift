@@ -28,11 +28,23 @@ class DisplayViewController: UIViewController {
         ratingLB.text = "\(movieD.rating)"
         genreLB.text = movieD.genre
         releaseYearLB.text = "\(movieD.releaseYear)"
-        imgView.image = UIImage(named: movieD.image)
+        let str:String = movieD.image
+        decodeTheImg(img: str)
+//        imgView.image = decodeImg(img: str)
         // Do any additional setup after loading the view.
     }
-    
-
+    func decodeTheImg(img: String) {
+        if let imageData = Data(base64Encoded: img, options: .ignoreUnknownCharacters),
+                   let decodedImage = UIImage(data: imageData) {
+                    imgView.image = decodedImage
+                } else {
+                    print("Failed to decode Base64 string.")
+                }
+    }
+    func decodeImg(img: String) -> UIImage  {
+        let dataDecoded:NSData = NSData(base64Encoded: img, options: NSData.Base64DecodingOptions(rawValue: 0))!
+        return  UIImage(data: dataDecoded as Data)!
+    }
     /*
     // MARK: - Navigation
 

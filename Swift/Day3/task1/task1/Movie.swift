@@ -14,7 +14,7 @@ class Movie: NSObject {
     var genre       = ""
     var image       = ""
 
-    init(title: String , rating: Double , releaseYear: Int , genre: String , image: String ) {
+    init(title: String , rating: Double , releaseYear: Int , genre: String ,image : String ) {
         self.title          = title
         self.rating         = rating
         self.releaseYear    = releaseYear

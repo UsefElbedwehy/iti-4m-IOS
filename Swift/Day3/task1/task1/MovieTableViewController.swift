@@ -4,39 +4,52 @@
 //
 //  Created by Uef on 11/01/2025.
 //
-
+// resources: https://stackoverflow.com/questions/65651573/use-existing-sqlite-db-in-swift
+// and : https://medium.com/@emre.deniz/ios-swift-sqlite3-integration-1b3dece47b46
+// https://stackoverflow.com/questions/65651573/use-existing-sqlite-db-in-swift
+// img: https://stackoverflow.com/questions/44780937/storing-and-retrieving-image-in-sqlite-with-swift
 import UIKit
 
 class MovieTableViewController: UITableViewController , MovieDelegete {
     var movieArr = [Movie]()
     func addMovieToTableView(_ movie: Movie) {
+        DBManager.dBMangerSharedInstance.insertMovie(movie)
         movieArr.append(movie)
+        
         tableView.reloadData()
     }
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        initMovieArr()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+//        initMovieArr()
+//        // Uncomment the following line to preserve selection between presentations
+//        // self.clearsSelectionOnViewWillAppear = false
+//
+//        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "add", style: .plain, target: self, action: #selector(addMovie))
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+//        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+//        let mov = Movie(title: "Inception", rating: 8.4, releaseYear: 2010 , genre: "Action", image: "MR.jpeg")
+//        DBManager.dBMangerSharedInstance.updateMovie(movie: mov)
+        movieArr = DBManager.dBMangerSharedInstance.getAllMovies()
+        for movie in movieArr {
+                print("Movie: \(movie.title)")
+                }
     }
+                              
     @objc func addMovie()  {
         let aVC = self.storyboard?.instantiateViewController(withIdentifier: "addVC") as! AddViewController
         aVC.movieDelegete = self
         self.navigationController?.pushViewController(aVC, animated: true)
     }
-    func initMovieArr()  {
-        movieArr.append(Movie(title: "MR Robot", rating: 9.2, releaseYear: 2022, genre: "Drama", image: "MRR2.jpeg"))
-        movieArr.append(Movie(title: "FAst and Furious", rating: 7.3, releaseYear: 2002, genre: "Action", image: "FAF.jpeg"))
-        movieArr.append(Movie(title: "RED 2", rating: 8.8, releaseYear: 2023, genre: "Comedy", image: "RED.jpeg"))
-        movieArr.append(Movie(title: "The Transformers", rating: 5.7, releaseYear: 2021, genre: "Horror", image: "TRANS.jpeg"))
-        movieArr.append(Movie(title: "The Transporter", rating: 6.5, releaseYear: 2001, genre: "Romance", image: "TP.jpeg"))
-    }
+//    func initMovieArr()  {
+//        movieArr.append(Movie(title: "MR Robot", rating: 9.2, releaseYear: 2022, genre: "Drama", image: "MRR2.jpeg"))
+//        movieArr.append(Movie(title: "FAst and Furious", rating: 7.3, releaseYear: 2002, genre: "Action", image: "FAF.jpeg"))
+//        movieArr.append(Movie(title: "RED 2", rating: 8.8, releaseYear: 2023, genre: "Comedy", image: "RED.jpeg"))
+//        movieArr.append(Movie(title: "The Transformers", rating: 5.7, releaseYear: 2021, genre: "Horror", image: "TRANS.jpeg"))
+//        movieArr.append(Movie(title: "The Transporter", rating: 6.5, releaseYear: 2001, genre: "Romance", image: "TP.jpeg"))
+//    }
 
     // MARK: - Table view data source
 
@@ -109,5 +122,5 @@ class MovieTableViewController: UITableViewController , MovieDelegete {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
