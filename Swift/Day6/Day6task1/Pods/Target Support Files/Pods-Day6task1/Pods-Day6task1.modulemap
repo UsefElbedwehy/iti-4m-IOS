@@ -1,0 +1,6 @@
+framework module Pods_Day6task1 {
+  umbrella header "Pods-Day6task1-umbrella.h"
+
+  export *
+  module * { export * }
+}

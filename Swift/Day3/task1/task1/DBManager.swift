@@ -15,7 +15,7 @@ class DBManager {
     
     private init(){
             db = openDatabase()
-        createMovieTable()
+            createMovieTable()
         }
     func openDatabase() -> OpaquePointer? {
         let filePath = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(dataPath)
@@ -56,8 +56,6 @@ class DBManager {
     
     func insertMovie(_ movie: Movie) -> Bool{
             let movies = getAllMovies()
-            
-            // Check user email is exist in User table or not
             for moviee in movies{
                 if movie.title == moviee.title {
                     return false
@@ -68,11 +66,11 @@ class DBManager {
             var insertStatement: OpaquePointer? = nil
             
             if sqlite3_prepare_v2(db, insertStatementString, -1, &insertStatement, nil) == SQLITE_OK {
-                sqlite3_bind_text(insertStatement, 1, (movie.title as NSString).utf8String, -1, nil)
+                sqlite3_bind_text(insertStatement,   1, (movie.title as NSString).utf8String, -1, nil)
                 sqlite3_bind_double(insertStatement, 2, movie.rating)
-                sqlite3_bind_int(insertStatement, 3, Int32(movie.releaseYear))
-                sqlite3_bind_text(insertStatement, 4, (movie.genre as NSString).utf8String, -1, nil)
-                sqlite3_bind_text(insertStatement, 5, (movie.image as NSString).utf8String, -1, nil)
+                sqlite3_bind_int(insertStatement,    3, Int32(movie.releaseYear))
+                sqlite3_bind_text(insertStatement,   4, (movie.genre as NSString).utf8String, -1, nil)
+                sqlite3_bind_text(insertStatement,   5, (movie.image as NSString).utf8String, -1, nil)
 
                 if sqlite3_step(insertStatement) == SQLITE_DONE {
                     print("Movie is created successfully.")
@@ -88,7 +86,6 @@ class DBManager {
             }
         }
     
-    // Get all the users from User table
     func getAllMovies() -> [Movie] {
             let queryStatementString = "SELECT * FROM Movie;"
             var queryStatement: OpaquePointer? = nil
@@ -118,10 +115,10 @@ class DBManager {
         
         if sqlite3_prepare_v2(db, updateStatementString, -1, &updateStatement, nil) == SQLITE_OK {
             sqlite3_bind_double(updateStatement, 1, movie.rating)
-            sqlite3_bind_int(updateStatement, 2, Int32(movie.releaseYear))
-            sqlite3_bind_text(updateStatement, 3, (movie.genre as NSString).utf8String, -1, nil)
-            sqlite3_bind_text(updateStatement, 4, (movie.image as NSString).utf8String, -1, nil)
-            sqlite3_bind_text(updateStatement, 5, (movie.title as NSString).utf8String, -1, nil)
+            sqlite3_bind_int(updateStatement,    2, Int32(movie.releaseYear))
+            sqlite3_bind_text(updateStatement,   3, (movie.genre as NSString).utf8String, -1, nil)
+            sqlite3_bind_text(updateStatement,   4, (movie.image as NSString).utf8String, -1, nil)
+            sqlite3_bind_text(updateStatement,   5, (movie.title as NSString).utf8String, -1, nil)
             
             if sqlite3_step(updateStatement) == SQLITE_DONE {
                 print("Movie updated successfully.")

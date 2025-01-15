@@ -15,7 +15,6 @@ class MovieTableViewController: UITableViewController , MovieDelegete {
     func addMovieToTableView(_ movie: Movie) {
         DBManager.dBMangerSharedInstance.insertMovie(movie)
         movieArr.append(movie)
-        
         tableView.reloadData()
     }
     
@@ -35,7 +34,7 @@ class MovieTableViewController: UITableViewController , MovieDelegete {
         movieArr = DBManager.dBMangerSharedInstance.getAllMovies()
         for movie in movieArr {
                 print("Movie: \(movie.title)")
-                }
+            }
     }
                               
     @objc func addMovie()  {
