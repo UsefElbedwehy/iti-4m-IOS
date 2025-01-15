@@ -47,7 +47,7 @@ class MovieDisplayViewController: UIViewController {
         productionLB.text = mov.production
         websiteLB.text = mov.website
         cosmosView.rating = mov.rating
-        posterImgView.sd_setImage(with: URL(string: mov.poster), placeholderImage: UIImage(named: "placeholder.png"))
+        posterImgView.sd_setImage(with: URL(string: mov.poster), placeholderImage: UIImage(named: "ih.jpeg"))
     }
     
 
