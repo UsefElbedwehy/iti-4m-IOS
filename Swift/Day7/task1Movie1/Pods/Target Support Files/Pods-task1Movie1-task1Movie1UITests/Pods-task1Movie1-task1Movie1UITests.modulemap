@@ -1,0 +1,6 @@
+framework module Pods_task1Movie1_task1Movie1UITests {
+  umbrella header "Pods-task1Movie1-task1Movie1UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

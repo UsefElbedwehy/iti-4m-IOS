@@ -6,20 +6,31 @@
 //
 
 import UIKit
-
-class MovieTableViewController: UITableViewController , MovieDelegete{
+import Reachability
+class MovieTableViewController: UITableViewController , MovieDelegete , ConnectionDelegete {
     var movieArr = [Movie1]()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        addRightNavBtn()
+        ConnectionHelper.connDelegete = self
+        ConnectionHelper.connectionSharedInstance.start()
+        
+    }
+    func loadData() {
+        movieArr = DataBaseHelper.dBSharedInstance.fetchData()
+        tableView.reloadData()
+    }
+    func showAlert() {
+        let alert = UIAlertController(title: "Connection Failed!", message: "You are offline. Please connect to the internet to load the data.", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(ok)
+        self.present(alert, animated: true, completion: nil)
+    }
     func addMovieToTableView(_ movObj: Movie1) {
         movieArr.removeAll()
         DataBaseHelper.dBSharedInstance.saveData(movObj)
         movieArr = DataBaseHelper.dBSharedInstance.fetchData()
         tableView.reloadData()
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        addRightNavBtn()
-        movieArr = DataBaseHelper.dBSharedInstance.fetchData()
     }
     @objc func addMovie()  {
         let aVC = self.storyboard?.instantiateViewController(withIdentifier: "add") as! AddViewController

@@ -1,13 +1,13 @@
 //
-//  task1Movie1UITestsLaunchTests.swift
-//  task1Movie1UITests
+//  task2UITestsLaunchTests.swift
+//  task2UITests
 //
 //  Created by Usef on 16/01/2025.
 //
 
 import XCTest
 
-final class task1Movie1UITestsLaunchTests: XCTestCase {
+final class task2UITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

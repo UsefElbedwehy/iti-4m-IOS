@@ -1,14 +1,14 @@
 //
-//  task1Movie1Tests.swift
-//  task1Movie1Tests
+//  task2Tests.swift
+//  task2Tests
 //
 //  Created by Usef on 16/01/2025.
 //
 
 import XCTest
-@testable import task1Movie1
+@testable import task2
 
-final class task1Movie1Tests: XCTestCase {
+final class task2Tests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

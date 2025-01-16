@@ -1,0 +1,6 @@
+framework module Pods_task1Movie1 {
+  umbrella header "Pods-task1Movie1-umbrella.h"
+
+  export *
+  module * { export * }
+}
