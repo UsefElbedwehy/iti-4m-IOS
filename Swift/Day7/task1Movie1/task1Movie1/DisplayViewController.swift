@@ -8,10 +8,25 @@
 import UIKit
 
 class DisplayViewController: UIViewController {
-
+    var mov: Movie1!
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var imggView: UIImageView!
+    
+    @IBOutlet weak var ryearLabel: UILabel!
+    
+    @IBOutlet weak var ratingLabel: UILabel!
+    
+    @IBOutlet weak var genreLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        titleLabel.text = mov.title
+        ratingLabel.text = "\(mov.rating)"
+        genreLabel.text = mov.genre
+        ryearLabel.text = "\(mov.releaseYear)"
+        imggView.image = UIImage(named: mov.image)
         // Do any additional setup after loading the view.
     }
     

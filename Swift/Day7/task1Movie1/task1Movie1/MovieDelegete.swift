@@ -6,3 +6,6 @@
 //
 
 import Foundation
+protocol MovieDelegete {
+    func addMovieToTableView(_ movObj:Movie1)
+}

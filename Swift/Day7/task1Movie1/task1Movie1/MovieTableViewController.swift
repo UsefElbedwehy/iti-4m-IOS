@@ -7,39 +7,49 @@
 
 import UIKit
 
-class MovieTableViewController: UITableViewController {
-
+class MovieTableViewController: UITableViewController , MovieDelegete{
+    var movieArr = [Movie1]()
+    func addMovieToTableView(_ movObj: Movie1) {
+        movieArr.removeAll()
+        DataBaseHelper.dBSharedInstance.saveData(movObj)
+        movieArr = DataBaseHelper.dBSharedInstance.fetchData()
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        addRightNavBtn()
+        movieArr = DataBaseHelper.dBSharedInstance.fetchData()
     }
-
+    @objc func addMovie()  {
+        let aVC = self.storyboard?.instantiateViewController(withIdentifier: "add") as! AddViewController
+        aVC.movieDelegete = self
+        self.navigationController?.pushViewController(aVC, animated: true)
+    }
+    func addRightNavBtn() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "+", style: .done, target: self, action: #selector(addMovie))
+    }
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return movieArr.count
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = movieArr[indexPath.row].title
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let dVC = self.storyboard?.instantiateViewController(identifier: "display") as! DisplayViewController
+        dVC.mov = movieArr[indexPath.row]
+        self.navigationController?.pushViewController(dVC, animated: true)
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
