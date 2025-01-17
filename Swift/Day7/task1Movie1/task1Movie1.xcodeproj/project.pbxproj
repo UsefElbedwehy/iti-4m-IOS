@@ -32,14 +32,10 @@
 /* Begin PBXFileReference section */
 		0110932642FCD0EE6B3DEC45 /* Pods_task1Movie1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_task1Movie1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		143CAC69F91E26939259C51A /* Pods_task1Movie1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_task1Movie1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2753FA6EB0F82BAF5B071EED /* Pods-task1Movie1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-task1Movie1Tests.debug.xcconfig"; path = "Target Support Files/Pods-task1Movie1Tests/Pods-task1Movie1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		66916CEC8CE7F99DA2874F20 /* Pods-task1Movie1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-task1Movie1.release.xcconfig"; path = "Target Support Files/Pods-task1Movie1/Pods-task1Movie1.release.xcconfig"; sourceTree = "<group>"; };
-		C0485D0A19B4F5FD8F6CE72F /* Pods-task1Movie1-task1Movie1UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-task1Movie1-task1Movie1UITests.release.xcconfig"; path = "Target Support Files/Pods-task1Movie1-task1Movie1UITests/Pods-task1Movie1-task1Movie1UITests.release.xcconfig"; sourceTree = "<group>"; };
 		C448B3762D39141B00FDA8DE /* task1Movie1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = task1Movie1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C448B38F2D39141D00FDA8DE /* task1Movie1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = task1Movie1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C448B3992D39141D00FDA8DE /* task1Movie1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = task1Movie1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBECA49E42B48DF32ECF5FC1 /* Pods-task1Movie1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-task1Movie1Tests.release.xcconfig"; path = "Target Support Files/Pods-task1Movie1Tests/Pods-task1Movie1Tests.release.xcconfig"; sourceTree = "<group>"; };
-		E7B603DCA0591A56D51BFC2E /* Pods-task1Movie1-task1Movie1UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-task1Movie1-task1Movie1UITests.debug.xcconfig"; path = "Target Support Files/Pods-task1Movie1-task1Movie1UITests/Pods-task1Movie1-task1Movie1UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EE83C0BAA8F1544C291C10C4 /* Pods-task1Movie1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-task1Movie1.debug.xcconfig"; path = "Target Support Files/Pods-task1Movie1/Pods-task1Movie1.debug.xcconfig"; sourceTree = "<group>"; };
 		FDD7ADF3042CC440BAFEB47D /* Pods_task1Movie1_task1Movie1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_task1Movie1_task1Movie1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,10 +124,6 @@
 			children = (
 				EE83C0BAA8F1544C291C10C4 /* Pods-task1Movie1.debug.xcconfig */,
 				66916CEC8CE7F99DA2874F20 /* Pods-task1Movie1.release.xcconfig */,
-				E7B603DCA0591A56D51BFC2E /* Pods-task1Movie1-task1Movie1UITests.debug.xcconfig */,
-				C0485D0A19B4F5FD8F6CE72F /* Pods-task1Movie1-task1Movie1UITests.release.xcconfig */,
-				2753FA6EB0F82BAF5B071EED /* Pods-task1Movie1Tests.debug.xcconfig */,
-				CBECA49E42B48DF32ECF5FC1 /* Pods-task1Movie1Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -588,7 +580,6 @@
 		};
 		C448B3A82D39141D00FDA8DE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2753FA6EB0F82BAF5B071EED /* Pods-task1Movie1Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -607,7 +598,6 @@
 		};
 		C448B3A92D39141D00FDA8DE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBECA49E42B48DF32ECF5FC1 /* Pods-task1Movie1Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -626,7 +616,6 @@
 		};
 		C448B3AB2D39141D00FDA8DE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7B603DCA0591A56D51BFC2E /* Pods-task1Movie1-task1Movie1UITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -643,7 +632,6 @@
 		};
 		C448B3AC2D39141D00FDA8DE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0485D0A19B4F5FD8F6CE72F /* Pods-task1Movie1-task1Movie1UITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
