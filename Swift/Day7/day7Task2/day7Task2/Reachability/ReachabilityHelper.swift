@@ -33,6 +33,7 @@ class ReachabilityHelper {
           APIConnectionHelper.sharedInstance.fethAPIData()
       case .unavailable:
         print("Network not reachable")
+          ReachabilityHelper.Delegete.retrieveLocalData()
           ReachabilityHelper.Delegete.showAlert()
       }
     }

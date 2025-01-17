@@ -7,49 +7,86 @@
 
 import UIKit
 
-class MovieTableViewController: UITableViewController {
-
+class MovieTableViewController: UITableViewController , APIDelegete , ReachalbiltyDelegete , ActivityIndicatorDelegete{
+    var moviesArray = [Movie]()
+    
+    func retrieveMovies(_ movies: [Movie]) {
+        moviesArray = movies
+        DataBaseCD.sharedInstance.deleteAll()
+        for movie in movies {
+            DataBaseCD.sharedInstance.saveData(movie)
+        }
+    }
+    func retrieveLocalData() {
+        moviesArray.removeAll()
+        moviesArray = DataBaseCD.sharedInstance.retrieveData()
+        tableView.reloadData()
+    }
+    func reloadTableViewData() {
+        tableView.reloadData()
+    }
+    func showAlert() {
+        let alert = UIAlertController(title: "Connection Failed!", message: "You are offline. Please connect to the internet to load new data.", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(ok)
+        self.present(alert, animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: ""), style: .done, target: self, action: #selector(refreshData))
+        APIConnectionHelper.delegete = self
+        ReachabilityHelper.Delegete = self
+        ActivityIndecator.delegete = self
+        ReachabilityHelper.sharedInstance.start()
+        
+//         self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    func startIndicator() {
+        ActivityIndecator.sharedInstance.indecator.center = view.center
+        ActivityIndecator.sharedInstance.indecator.startAnimating()
+    }
+    
+    func stopIndicator() {
+        ActivityIndecator.sharedInstance.indecator.stopAnimating()
     }
 
     // MARK: - Table view data source
 
+    @objc func refreshData(){
+        //retrieveData()
+        tableView.reloadData()
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return moviesArray.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = moviesArray[indexPath.row].title
+        cell.textLabel?.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         return cell
     }
-    */
-
-    /*
+    
+    
+    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
-
-    /*
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let dVC = self.storyboard?.instantiateViewController(identifier: "display") as! DisplayViewController
+        dVC.selectedMovie = moviesArray[indexPath.row]
+        self.navigationController?.pushViewController(dVC, animated: true)
+    }
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -59,7 +96,7 @@ class MovieTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.

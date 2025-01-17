@@ -7,6 +7,18 @@
 
 import UIKit
 
-class ActivityIndecator: NSObject {
-
+class ActivityIndecator {
+    public static let sharedInstance = ActivityIndecator()
+    public static var  delegete:ActivityIndicatorDelegete!
+    let indecator:UIActivityIndicatorView!
+    
+    private init() {
+        indecator = UIActivityIndicatorView(style: .large)
+    }
+    static func start(){
+        delegete.startIndicator()
+    }
+    static func stop(){
+        delegete.stopIndicator()
+    }
 }

@@ -6,3 +6,7 @@
 //
 
 import Foundation
+protocol ReachalbiltyDelegete {
+    func showAlert()
+    func retrieveLocalData()
+}

@@ -14,6 +14,7 @@ class APIConnectionHelper {
     private var req:URLRequest!
     private var session:URLSession!
     private init(){
+        ActivityIndecator.start()
         url = URL(string: "https://www.freetestapi.com/api/v1/movies")
         req = URLRequest(url: url)
         session = URLSession(configuration: .default)
@@ -26,6 +27,7 @@ class APIConnectionHelper {
                     //calback function to set movies
                 DispatchQueue.main.async{
                     APIConnectionHelper.delegete.retrieveMovies(movies)
+                    ActivityIndecator.stop()
                     APIConnectionHelper.delegete.reloadTableViewData()
                 }
             }catch{

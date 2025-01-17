@@ -6,3 +6,7 @@
 //
 
 import Foundation
+protocol ActivityIndicatorDelegete {
+    func startIndicator()
+    func stopIndicator()
+}
