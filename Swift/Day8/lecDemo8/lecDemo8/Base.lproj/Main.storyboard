@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Oq-l6-Hpg">
+    <device id="retina6_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="UWp-JX-DDM">
+            <objects>
+                <viewController id="3Oq-l6-Hpg" customClass="ViewController" customModule="lecDemo8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wbx-bI-9sE">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KIDS_STORE" translatesAutoresizingMaskIntoConstraints="NO" id="mOc-EF-1mh">
+                                <rect key="frame" x="0.0" y="-3" width="440" height="286.66666666666669"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeF-Bc-CP1">
+                                <rect key="frame" x="0.0" y="878" width="440" height="79"/>
+                                <color key="tintColor" systemColor="systemIndigoColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add to Watchlist"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UP" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BY2-JE-5ji">
+                                <rect key="frame" x="150" y="308.66666666666669" width="140" height="31"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="22"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvh-sv-N2S">
+                                <rect key="frame" x="16" y="362.66666666666669" width="408" height="79"/>
+                                <string key="text">78-year-old Carl Fredricksen travels to South America in his house equipped with balloons, inadvertently taking a young stowaway.</string>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PEz-dI-6yH"/>
+                        <color key="backgroundColor" red="0.071851325760000001" green="0.071851325760000001" blue="0.071851325760000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="PEz-dI-6yH" firstAttribute="bottom" secondItem="eeF-Bc-CP1" secondAttribute="bottom" constant="-35" id="2WA-VF-26b"/>
+                            <constraint firstItem="PEz-dI-6yH" firstAttribute="trailing" secondItem="mOc-EF-1mh" secondAttribute="trailing" id="4gy-hF-F7F"/>
+                            <constraint firstItem="PEz-dI-6yH" firstAttribute="trailing" secondItem="Xvh-sv-N2S" secondAttribute="trailing" constant="16" id="AlB-qf-gLS"/>
+                            <constraint firstItem="Xvh-sv-N2S" firstAttribute="top" secondItem="BY2-JE-5ji" secondAttribute="bottom" constant="23" id="TnA-2f-Cts"/>
+                            <constraint firstItem="PEz-dI-6yH" firstAttribute="trailing" secondItem="eeF-Bc-CP1" secondAttribute="trailing" id="V7V-s7-yNb"/>
+                            <constraint firstItem="eeF-Bc-CP1" firstAttribute="leading" secondItem="PEz-dI-6yH" secondAttribute="leading" id="Vq7-R1-fuF"/>
+                            <constraint firstItem="PEz-dI-6yH" firstAttribute="trailing" secondItem="BY2-JE-5ji" secondAttribute="trailing" constant="150" id="Y4h-hi-ne7"/>
+                            <constraint firstItem="BY2-JE-5ji" firstAttribute="leading" secondItem="PEz-dI-6yH" secondAttribute="leading" constant="150" id="YTb-bD-fEo"/>
+                            <constraint firstItem="mOc-EF-1mh" firstAttribute="top" secondItem="PEz-dI-6yH" secondAttribute="top" constant="-65" id="aio-kE-qEx"/>
+                            <constraint firstItem="mOc-EF-1mh" firstAttribute="leading" secondItem="PEz-dI-6yH" secondAttribute="leading" id="dP1-de-Msq"/>
+                            <constraint firstItem="eeF-Bc-CP1" firstAttribute="height" secondItem="Wbx-bI-9sE" secondAttribute="height" multiplier="0.040795" constant="40" id="oD9-C4-jAq"/>
+                            <constraint firstItem="BY2-JE-5ji" firstAttribute="top" secondItem="mOc-EF-1mh" secondAttribute="bottom" constant="25" id="rdN-bY-bNI"/>
+                            <constraint firstItem="Xvh-sv-N2S" firstAttribute="leading" secondItem="PEz-dI-6yH" secondAttribute="leading" constant="16" id="sDd-gm-PAh"/>
+                            <constraint firstItem="mOc-EF-1mh" firstAttribute="height" secondItem="Wbx-bI-9sE" secondAttribute="height" multiplier="0.3" id="uNw-Mv-gOf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FEd-pE-kWb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-453" y="-161"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="KIDS_STORE" width="1200" height="824"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
