@@ -8,6 +8,7 @@
 import UIKit
 
 class MovieTableViewController: UITableViewController , APIDelegete , ReachalbiltyDelegete , ActivityIndicatorDelegete{
+    var isOnline = true
     var moviesArray = [Movie]()
     
     func retrieveMovies(_ movies: [Movie]) {
@@ -18,11 +19,13 @@ class MovieTableViewController: UITableViewController , APIDelegete , Reachalbil
         }
     }
     func retrieveLocalData() {
+        isOnline = false
         moviesArray.removeAll()
         moviesArray = DataBaseCD.sharedInstance.retrieveData()
         tableView.reloadData()
     }
     func reloadTableViewData() {
+        isOnline = true
         tableView.reloadData()
     }
     func showAlert() {
@@ -38,7 +41,8 @@ class MovieTableViewController: UITableViewController , APIDelegete , Reachalbil
         ReachabilityHelper.Delegete = self
         ActivityIndecator.delegete = self
         ReachabilityHelper.sharedInstance.start()
-        
+        self.navigationItem.title = "Movie App"
+        self.navigationController?.navigationBar.barTintColor = UIColor.black
 //         self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     func startIndicator() {
@@ -96,8 +100,19 @@ class MovieTableViewController: UITableViewController , APIDelegete , Reachalbil
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
+        header.tintColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1.0)
+    }
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if isOnline {
+            return "Online Movies"
+        }else {
+            return "Offline Movies"
+        }
+    }
     
-
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {

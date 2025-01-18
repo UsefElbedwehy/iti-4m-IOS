@@ -35,7 +35,9 @@
                             <outlet property="delegate" destination="Gl9-PU-AIK" id="7Bx-kD-ofe"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="6IQ-hg-R1z"/>
+                    <navigationItem key="navigationItem" id="6IQ-hg-R1z">
+                        <barButtonItem key="backBarButtonItem" title="Movie List" id="NWb-dk-wFf"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NWP-qE-9Qd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -174,6 +176,10 @@
                                 <rect key="frame" x="235" y="105.66666666666667" width="44" height="41.000000000000014"/>
                                 <color key="tintColor" systemColor="systemYellowColor"/>
                             </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="euu-lh-i92">
+                                <rect key="frame" x="0.0" y="47" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZWV-H2-Lkb"/>
                         <color key="backgroundColor" red="0.071851325760000001" green="0.071851325760000001" blue="0.071851325760000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -285,9 +291,15 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y3k-fz-GEV" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h3S-vP-vkg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="h3S-vP-vkg">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" systemColor="labelColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" systemColor="labelColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -305,6 +317,9 @@
         <image name="id" width="512" height="512"/>
         <image name="runtime-2" width="512" height="512"/>
         <image name="star.png" width="384" height="384"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
