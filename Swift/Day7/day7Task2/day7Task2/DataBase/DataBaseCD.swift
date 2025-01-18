@@ -76,7 +76,7 @@ class DataBaseCD {
         return tempMovies
     }
     func deleteAll(){
-        retrieveData()
+        _ = retrieveData()
         for movie in movies {
             managedContex.delete(movie)
         }

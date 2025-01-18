@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+ platform :ios, '15.6'
 
 target 'day7Task2' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -7,14 +7,5 @@ target 'day7Task2' do
 pod 'ReachabilitySwift'
 pod 'SDWebImage', '~> 5.0'
   # Pods for day7Task2
-
-  target 'day7Task2Tests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'day7Task2UITests' do
-    # Pods for testing
-  end
 
 end
