@@ -26,6 +26,7 @@ class DisplayViewController: UIViewController {
     
     @IBOutlet weak var imgView: UIImageView!
     override func viewDidLoad() {
+        self.navigationItem.title = NSLocalizedString("Movie", comment: "DisplayVCNavigationBarTitle")
         super.viewDidLoad()
         titleLB.text   = selectedMovie.title.uppercased()
         idLB.text      = String(selectedMovie.id)

@@ -41,7 +41,9 @@ class MovieTableViewController: UITableViewController , APIDelegete , Reachalbil
         ReachabilityHelper.Delegete = self
         ActivityIndecator.delegete = self
         ReachabilityHelper.sharedInstance.start()
-        self.navigationItem.title = "Movie App"
+        self.navigationItem.title = NSLocalizedString("Movie App", comment: "")
+        self.tableView.headerView(forSection: 0)
+//        self.navigationItem.title.id
         self.navigationController?.navigationBar.barTintColor = UIColor.black
 //         self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
@@ -102,6 +104,12 @@ class MovieTableViewController: UITableViewController , APIDelegete , Reachalbil
     }
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
+        if isOnline {
+            header.textLabel?.text = NSLocalizedString("Online Movies", comment: "")
+        }else {
+            header.textLabel?.text = NSLocalizedString("Offline Movies", comment: "")
+        }
+        
         header.textLabel?.textColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
         header.tintColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1.0)
     }

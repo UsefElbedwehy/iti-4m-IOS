@@ -1,0 +1,52 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Key" : {
+      "extractionState" : "manual"
+    },
+    "Movie" : {
+      "comment" : "DisplayVCNavigationBarTitle",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فيلم"
+          }
+        }
+      }
+    },
+    "Movie App" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "برنامج افلام"
+          }
+        }
+      }
+    },
+    "Offline Movies" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أفلام دون اتصال"
+          }
+        }
+      }
+    },
+    "Online Movies" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أفلام على الإنترنت"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

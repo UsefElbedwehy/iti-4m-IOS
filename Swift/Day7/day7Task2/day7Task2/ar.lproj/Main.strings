@@ -1,0 +1,55 @@
+
+/* Class = "UILabel"; text = "Awards"; ObjectID = "9RT-nF-O4y"; */
+"9RT-nF-O4y.text" = "النوع";
+
+/* Class = "UILabel"; text = "rYear"; ObjectID = "BId-S4-baL"; */
+"BId-S4-baL.text" = "rYear";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Foz-Sk-pcH"; */
+"Foz-Sk-pcH.text" = "Label";
+
+/* Class = "UILabel"; text = "rYear"; ObjectID = "INE-ul-hT7"; */
+"INE-ul-hT7.text" = "rYear";
+
+/* Class = "UIBarButtonItem"; title = "Movie List"; ObjectID = "NWb-dk-wFf"; */
+"NWb-dk-wFf.title" = "قائمة الأفلام";
+
+/* Class = "UILabel"; text = "genre"; ObjectID = "Qq4-eW-HrV"; */
+"Qq4-eW-HrV.text" = "genre";
+
+/* Class = "UILabel"; text = "Dir"; ObjectID = "Tag-yW-yxE"; */
+"Tag-yW-yxE.text" = "Dir";
+
+/* Class = "UILabel"; text = "Plot"; ObjectID = "VED-AQ-Cy7"; */
+"VED-AQ-Cy7.text" = "حبكة";
+
+/* Class = "UILabel"; text = "Directors"; ObjectID = "fHc-aV-Dn3"; */
+"fHc-aV-Dn3.text" = "المديرين";
+
+/* Class = "UILabel"; text = "rYear"; ObjectID = "frE-qQ-Jdu"; */
+"frE-qQ-Jdu.text" = "rYear";
+
+/* Class = "UILabel"; text = "RunTime"; ObjectID = "glc-cN-gau"; */
+"glc-cN-gau.text" = "RunTime";
+
+/* Class = "UILabel"; text = "ID"; ObjectID = "huC-9k-U1t"; */
+"huC-9k-U1t.text" = "ID";
+
+/* Class = "UILabel"; text = "rYear"; ObjectID = "ix6-zh-vkj"; */
+"ix6-zh-vkj.text" = "السنة";
+
+/* Class = "UILabel"; text = "Rating"; ObjectID = "mu1-w2-Tba"; */
+"mu1-w2-Tba.text" = "التقيم";
+
+/* Class = "UILabel"; text = "Awards"; ObjectID = "nrt-gA-kgU"; */
+"nrt-gA-kgU.text" = "الجوايز";
+
+/* Class = "UILabel"; text = "Actors"; ObjectID = "rnX-sf-l8e"; */
+"rnX-sf-l8e.text" = "الممثلين";
+
+/* Class = "UILabel"; text = "rYear"; ObjectID = "tev-p3-OR1"; */
+"tev-p3-OR1.text" = "rYear";
+
+/* Class = "UILabel"; text = "rYear"; ObjectID = "wMU-rM-K0c"; */
+"wMU-rM-K0c.text" = "rYear";
+
