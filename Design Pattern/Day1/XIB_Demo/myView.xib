@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="myView" customModule="XIB_Demo" customModuleProvider="target">
+            <connections>
+                <outlet property="myButton" destination="kEc-W4-pNi" id="suv-fO-1mP"/>
+                <outlet property="myLabel" destination="kEc-W4-pNi" id="HmM-Qo-gkw"/>
+                <outlet property="myView" destination="iN0-l3-epB" id="egb-I3-fQT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="386" height="294"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEc-W4-pNi">
+                    <rect key="frame" x="210" y="128" width="49" height="38"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Go"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Go"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iti" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lrh-5o-Sdc">
+                    <rect key="frame" x="133" y="111" width="44" height="72"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemMintColor"/>
+            <constraints>
+                <constraint firstItem="Lrh-5o-Sdc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="133" id="1ci-WC-jki"/>
+                <constraint firstItem="kEc-W4-pNi" firstAttribute="leading" secondItem="Lrh-5o-Sdc" secondAttribute="trailing" constant="33" id="350-8A-zeD"/>
+                <constraint firstItem="kEc-W4-pNi" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.126943" id="DGu-CC-OpX"/>
+                <constraint firstItem="kEc-W4-pNi" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.129252" id="TeV-ql-Vg1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kEc-W4-pNi" secondAttribute="trailing" constant="127" id="Zdv-UP-noC"/>
+                <constraint firstItem="Lrh-5o-Sdc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="52" id="q1a-Pi-fJ6"/>
+                <constraint firstItem="kEc-W4-pNi" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="69" id="u9T-jq-Tv1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="122.13740458015266" y="12.67605633802817"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
