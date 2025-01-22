@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "UP"; ObjectID = "BY2-JE-5ji"; */
+"BY2-JE-5ji.text" = "أعلى";
+
+/* Class = "UILabel"; text = "78-year-old Carl Fredricksen travels to South America in his house equipped with balloons, inadvertently taking a young stowaway."; ObjectID = "Xvh-sv-N2S"; */
+"Xvh-sv-N2S.text" = "يسافر كارل فريدريكسن البالغ من العمر 78 عامًا إلى أمريكا الجنوبية في منزله المجهز بالبالونات، ويأخذ معه عن غير قصد شابًا متسللًا.";
+
+/* Class = "UIButton"; configuration.title = "Add to Watchlist"; ObjectID = "eeF-Bc-CP1"; */
+"eeF-Bc-CP1.configuration.title" = "أضف إلى قائمة المراقبة";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "eeF-Bc-CP1"; */
+"eeF-Bc-CP1.normalTitle" = "Button";
