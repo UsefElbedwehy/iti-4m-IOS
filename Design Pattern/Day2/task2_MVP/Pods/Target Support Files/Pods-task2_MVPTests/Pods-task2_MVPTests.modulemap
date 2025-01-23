@@ -1,0 +1,6 @@
+framework module Pods_task2_MVPTests {
+  umbrella header "Pods-task2_MVPTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
