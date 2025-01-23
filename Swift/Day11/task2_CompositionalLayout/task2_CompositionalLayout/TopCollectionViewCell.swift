@@ -9,5 +9,4 @@ import UIKit
 
 class TopCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imgView: UIImageView!
-    @IBOutlet weak var labelLB: UILabel!
 }
