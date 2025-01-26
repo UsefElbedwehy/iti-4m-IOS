@@ -10,6 +10,10 @@ import UIKit
 class BottomCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imgView: UIImageView!
     
+    @IBOutlet weak var priceLB: UILabel!
     @IBOutlet weak var titleLB: UILabel!
     @IBOutlet weak var descriptionLB: UILabel!
+    
+    
+    @IBOutlet weak var addAction: UIButton!
 }
