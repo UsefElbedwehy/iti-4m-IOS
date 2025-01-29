@@ -20,3 +20,5 @@ class ProductResult: Decodable {
     var description: String?
     var thumbnail: String?
 }
+
+

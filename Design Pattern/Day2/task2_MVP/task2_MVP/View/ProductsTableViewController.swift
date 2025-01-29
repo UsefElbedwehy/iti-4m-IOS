@@ -8,22 +8,22 @@
 import UIKit
 import SDWebImage
 protocol HomeProtocol {
-    func renderToView(res: Product)
+    func renderToView(res: FootBallSport)
 }
 
 class ProductsTableViewController: UITableViewController , HomeProtocol{
     
     
-    var productsArray = [ProductResult]()
+    var productsArray = [FootBallLeague]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        var presenter = Presenter()
+        let presenter = Presenter()
         presenter.attachView(view: self)
         presenter.getDataFromModel()
         
     }
-    func renderToView(res: Product) {
-        productsArray = res.products!
+    func renderToView(res: FootBallSport) {
+        productsArray = res.result!
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
@@ -38,6 +38,7 @@ class ProductsTableViewController: UITableViewController , HomeProtocol{
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        print(productsArray.count)
         return productsArray.count
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -47,8 +48,8 @@ class ProductsTableViewController: UITableViewController , HomeProtocol{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProductsTableViewCell
 
         // Configure the cell...
-        cell.titleLB.text = productsArray[indexPath.row].title
-        cell.thumbnailView.sd_setImage(with: URL(string: productsArray[indexPath.row].thumbnail!), placeholderImage: UIImage(named: "placeholder.png"))
+        cell.titleLB.text = productsArray[indexPath.row].league_name ?? "placeholder"
+        cell.thumbnailView.sd_setImage(with: URL(string: productsArray[indexPath.row].league_logo ?? "placeholder"), placeholderImage: UIImage(named: "placeholder.png"))
         return cell
     }
 
