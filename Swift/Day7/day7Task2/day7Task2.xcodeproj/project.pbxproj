@@ -10,11 +10,22 @@
 		DDF25868672C3A14E6BEB385 /* Pods_day7Task2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D5D7839B1CB0ACFDCAF33E /* Pods_day7Task2.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C488F52F2D4E5B3C00948D5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C40040202D3A7B5100FA7F64 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C40040272D3A7B5100FA7F64;
+			remoteInfo = day7Task2;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		264FA3C06BFA83DE33C8909E /* Pods-day7Task2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-day7Task2.release.xcconfig"; path = "Target Support Files/Pods-day7Task2/Pods-day7Task2.release.xcconfig"; sourceTree = "<group>"; };
 		42D5D7839B1CB0ACFDCAF33E /* Pods_day7Task2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_day7Task2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5534C422DA47183DFE62563 /* Pods-day7Task2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-day7Task2.debug.xcconfig"; path = "Target Support Files/Pods-day7Task2/Pods-day7Task2.debug.xcconfig"; sourceTree = "<group>"; };
 		C40040282D3A7B5100FA7F64 /* day7Task2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = day7Task2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C488F52B2D4E5B3C00948D5C /* day7Task2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = day7Task2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +47,11 @@
 			path = day7Task2;
 			sourceTree = "<group>";
 		};
+		C488F52C2D4E5B3C00948D5C /* day7Task2Tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = day7Task2Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +60,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDF25868672C3A14E6BEB385 /* Pods_day7Task2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C488F5282D4E5B3C00948D5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				C400402A2D3A7B5100FA7F64 /* day7Task2 */,
+				C488F52C2D4E5B3C00948D5C /* day7Task2Tests */,
 				C40040292D3A7B5100FA7F64 /* Products */,
 				C1AE9D9CC11CA2F3A31910D5 /* Pods */,
 				78A398AECEB87F32BE53B613 /* Frameworks */,
@@ -81,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				C40040282D3A7B5100FA7F64 /* day7Task2.app */,
+				C488F52B2D4E5B3C00948D5C /* day7Task2Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,6 +135,29 @@
 			productReference = C40040282D3A7B5100FA7F64 /* day7Task2.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C488F52A2D4E5B3C00948D5C /* day7Task2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C488F5332D4E5B3C00948D5C /* Build configuration list for PBXNativeTarget "day7Task2Tests" */;
+			buildPhases = (
+				C488F5272D4E5B3C00948D5C /* Sources */,
+				C488F5282D4E5B3C00948D5C /* Frameworks */,
+				C488F5292D4E5B3C00948D5C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C488F5302D4E5B3C00948D5C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				C488F52C2D4E5B3C00948D5C /* day7Task2Tests */,
+			);
+			name = day7Task2Tests;
+			packageProductDependencies = (
+			);
+			productName = day7Task2Tests;
+			productReference = C488F52B2D4E5B3C00948D5C /* day7Task2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -122,6 +170,10 @@
 				TargetAttributes = {
 					C40040272D3A7B5100FA7F64 = {
 						CreatedOnToolsVersion = 16.2;
+					};
+					C488F52A2D4E5B3C00948D5C = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = C40040272D3A7B5100FA7F64;
 					};
 				};
 			};
@@ -141,12 +193,20 @@
 			projectRoot = "";
 			targets = (
 				C40040272D3A7B5100FA7F64 /* day7Task2 */,
+				C488F52A2D4E5B3C00948D5C /* day7Task2Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C40040262D3A7B5100FA7F64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C488F5292D4E5B3C00948D5C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -205,7 +265,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C488F5272D4E5B3C00948D5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C488F5302D4E5B3C00948D5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C40040272D3A7B5100FA7F64 /* day7Task2 */;
+			targetProxy = C488F52F2D4E5B3C00948D5C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C40040552D3A7B5200FA7F64 /* Debug */ = {
@@ -389,6 +464,52 @@
 			};
 			name = Release;
 		};
+		C488F5312D4E5B3C00948D5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iti.day7Task2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/day7Task2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/day7Task2";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		C488F5322D4E5B3C00948D5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iti.day7Task2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/day7Task2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/day7Task2";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -406,6 +527,15 @@
 			buildConfigurations = (
 				C40040552D3A7B5200FA7F64 /* Debug */,
 				C40040562D3A7B5200FA7F64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C488F5332D4E5B3C00948D5C /* Build configuration list for PBXNativeTarget "day7Task2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C488F5312D4E5B3C00948D5C /* Debug */,
+				C488F5322D4E5B3C00948D5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
