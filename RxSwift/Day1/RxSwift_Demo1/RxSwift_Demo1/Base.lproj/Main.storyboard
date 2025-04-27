@@ -25,6 +25,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSM-Lm-uLl">
+                                <rect key="frame" x="153" y="283" width="87" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="click me"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -37,7 +43,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="statusLB" destination="lLA-mz-B6p" id="16Z-ET-A9M"/>
+                        <outlet property="myBtn" destination="cSM-Lm-uLl" id="SCB-dl-P7r"/>
+                        <outlet property="statusLB" destination="lLA-mz-B6p" id="04h-Q9-cbx"/>
                         <outlet property="statusSwitch" destination="6jn-rj-e77" id="5bW-tA-bX1"/>
                     </connections>
                 </viewController>
@@ -45,10 +52,61 @@
             </objects>
             <point key="canvasLocation" x="62" y="4"/>
         </scene>
+        <!--Second View Controller-->
+        <scene sceneID="cql-vw-HTy">
+            <objects>
+                <viewController id="9aM-De-WYd" customClass="SecondViewController" customModule="RxSwift_Demo1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="noy-Fq-O6X">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1st, count, sum" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppH-Jn-tnj">
+                                <rect key="frame" x="10" y="99" width="373" height="26.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCe-VB-pPZ">
+                                <rect key="frame" x="83" y="259" width="103" height="39"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Debounce"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYn-2T-xbT">
+                                <rect key="frame" x="225" y="259" width="84" height="39"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Throttle"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MUj-Fz-DCT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yYn-2T-xbT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TCe-VB-pPZ" secondAttribute="trailing" constant="8" symbolic="YES" id="2Ib-HL-lcQ"/>
+                            <constraint firstItem="ppH-Jn-tnj" firstAttribute="centerX" secondItem="MUj-Fz-DCT" secondAttribute="centerX" id="Au9-qE-HtA"/>
+                            <constraint firstItem="yYn-2T-xbT" firstAttribute="top" secondItem="ppH-Jn-tnj" secondAttribute="bottom" constant="133.66666666666669" id="NiP-WU-YuE"/>
+                            <constraint firstItem="TCe-VB-pPZ" firstAttribute="leading" secondItem="MUj-Fz-DCT" secondAttribute="leading" constant="83" id="UJc-za-Eeh"/>
+                            <constraint firstItem="MUj-Fz-DCT" firstAttribute="trailing" secondItem="yYn-2T-xbT" secondAttribute="trailing" constant="84" id="kc8-Ow-cY0"/>
+                            <constraint firstItem="TCe-VB-pPZ" firstAttribute="top" secondItem="ppH-Jn-tnj" secondAttribute="bottom" constant="133.66666666666669" id="p51-Lh-FyQ"/>
+                            <constraint firstItem="ppH-Jn-tnj" firstAttribute="top" secondItem="MUj-Fz-DCT" secondAttribute="top" constant="40" id="rJC-Jr-d26"/>
+                            <constraint firstItem="MUj-Fz-DCT" firstAttribute="trailing" secondItem="ppH-Jn-tnj" secondAttribute="trailing" constant="10" id="yG7-a4-idd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="debounceBtn" destination="TCe-VB-pPZ" id="Q7F-Pq-GmJ"/>
+                        <outlet property="resultLB" destination="ppH-Jn-tnj" id="mCy-zK-rSM"/>
+                        <outlet property="throttleBtn" destination="yYn-2T-xbT" id="5Sh-pc-DuV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5eU-dx-ien" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973" y="17"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

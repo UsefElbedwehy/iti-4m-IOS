@@ -54,6 +54,7 @@
     [self.myTableView setTableHeaderView:self.searchBar];
     _myTableView.contentOffset = CGPointMake( 0,  (_myTableView.tableHeaderView.frame.size.height));
     [self.searchDisplayController setActive:NO animated:YES];
+    
 }
 - (BOOL)hidesSearchBarWhenScrolling{
     return TRUE;

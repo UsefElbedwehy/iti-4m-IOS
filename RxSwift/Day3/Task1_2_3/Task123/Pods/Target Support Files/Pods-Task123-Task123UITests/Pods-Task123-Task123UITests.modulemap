@@ -1,0 +1,6 @@
+framework module Pods_Task123_Task123UITests {
+  umbrella header "Pods-Task123-Task123UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_Task2_tableViewWithRx_Task2_tableViewWithRxUITests {
+  umbrella header "Pods-Task2_tableViewWithRx-Task2_tableViewWithRxUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

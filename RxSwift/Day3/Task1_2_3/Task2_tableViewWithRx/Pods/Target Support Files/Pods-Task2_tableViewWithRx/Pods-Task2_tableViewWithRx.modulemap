@@ -1,0 +1,6 @@
+framework module Pods_Task2_tableViewWithRx {
+  umbrella header "Pods-Task2_tableViewWithRx-umbrella.h"
+
+  export *
+  module * { export * }
+}

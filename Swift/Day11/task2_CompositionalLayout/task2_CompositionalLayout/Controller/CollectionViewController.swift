@@ -307,11 +307,11 @@ class CollectionViewController: UICollectionViewController {
         gradLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
         gradLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
         bgView.layer.insertSublayer(gradLayer, at: 0)
-        cell.layer.cornerRadius = 10
+        cell.layer.cornerRadius = 20
         cell.layer.shadowColor = UIColor.black.cgColor
         cell.layer.shadowOpacity = 0.1
         cell.layer.shadowOffset = CGSize(width: 0, height: 2)
-        cell.layer.shadowRadius = 4
+        cell.layer.shadowRadius = 10
         cell.backgroundView = bgView
     }
     
